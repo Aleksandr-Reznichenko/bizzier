@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:math';
+
+@use 'variables' as var;
+@use '../vendors/decimal' as *;
+
+// removing units of measurement
+@function units($unit) {
+  @if meta.type-of($unit) != 'number' {
+    @error "Expected a number, but got '#{$unit}'";
+  }
+
+  @if math.is-unitless($unit) {
+    @return $unit;
+  }
+
+  @return math.div($unit, ($unit * 0 + 1));
+}
+
+// px --> rem conversion
+@function rem($px) {
+  $rem: math.div(units($px), units(var.$fs-base)) * 1rem;
+
+  @return decimal-round($rem, 2);
+}
+
+// ================================================================
+// GETTERS (Functions to fetch data from maps)
+// ================================================================
+
+// get breakpoint
+@function breakpoint($key) {
+  @if not map.has-key(var.$breakpoints, $key) {
+    @error "This breakpoint does not exist ('#{$key}')! Please check the breakpoint!";
+  }
+
+  @return map.get(var.$breakpoints, $key);
+}
+
+// get color
+@function color($key) {
+  @if not map.has-key(var.$colors, $key) {
+    @error "This color does not exist ('#{$key}')! Please check the color!";
+  }
+
+  @return map.get(var.$colors, $key);
+}
+
+// get font-weight
+@function fw($key) {
+  @if not map.has-key(var.$font-weights, $key) {
+    @error "Value #{$key} not found in #{$font-weights} map!";
+  }
+
+  @return map.get(var.$font-weights, $key);
+}
+
+// get font-size
+@function fs($key) {
+  @if not map.has-key(var.$font-sizes, $key) {
+    @error "Value #{$key} not found in #{$font-sizes} map!";
+  }
+
+  @return map.get(var.$font-sizes, $key);
+}
+
+// get line-height
+@function lh($key) {
+  @if not map.has-key(var.$line-heights, $key) {
+    @error "Value #{$key} not found in #{$line-heights} map!";
+  }
+
+  @return map.get(var.$line-heights, $key);
+}
+
+// get section-padding
+@function section-space($key) {
+  @if not map.has-key(var.$section-space, $key) {
+    @error "Value #{$key} not found in #{$section-space} map!";
+  }
+
+  @return map.get(var.$section-space, $key);
+}
