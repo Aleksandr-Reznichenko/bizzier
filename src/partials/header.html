@@ -1,39 +1,43 @@
 <header class="header">
   <div class="header__inner container">
     <!-- logotype -->
-    <a class="header__logo logo" href="./">
+    <a class="header__logo" href="./">
       <svg class="header__logo-icon" aria-hidden="true" width="28" height="28">
         <use href="./src/images/sprite.svg#icon-logo"></use>
       </svg>
       Bizzier
     </a>
 
-    <!-- navigation -->
-    <nav class="header__nav" aria-label="Main navigation">
-      <ul class="header__nav-list">
-        <li class="header__nav-item">
-          <a class="header__nav-link" href="./">Home</a>
-        </li>
-        <li class="header__nav-item">
-          <a href="#about" class="header__nav-link">About</a>
-        </li>
-        <li class="header__nav-item">
-          <a href="#services" class="header__nav-link">Services</a>
-        </li>
-        <li class="header__nav-item">
-          <a href="#pricing" class="header__nav-link">Pricing</a>
-        </li>
-      </ul>
-    </nav>
+    <!-- navigation and cta-link wrapper -->
+    <div class="header__wrapper">
+      <!-- navigation -->
+      <nav class="header__nav" aria-label="Main navigation">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="./">Home</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#about" class="header__nav-link">About</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#services" class="header__nav-link">Services</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#pricing" class="header__nav-link">Pricing</a>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- cta-link -->
-    <a class="btn btn--primary" href="#cta">Try For Free</a>
+      <!-- cta-link -->
+      <a class="header__btn btn btn--accent" href="#cta">Try For Free</a>
+    </div>
 
     <!-- menu -->
     <button
       class="header__menu"
       type="button"
       aria-label="Open menu"
+      title="Open menu"
       aria-expanded="false">
       <svg class="header__menu-icon" aria-hidden="true" width="18" height="14">
         <use href="./src/images/sprite.svg#icon-burger"></use>
