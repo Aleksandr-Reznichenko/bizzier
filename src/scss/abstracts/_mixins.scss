@@ -1,0 +1,46 @@
+@use 'functions' as fn;
+@use '../vendors/fluid' as *;
+
+// clamp
+@mixin fluid-text($min, $max) {
+  font-size: fluid(fn.fs($min), fn.fs($max));
+}
+
+// flex-center
+@mixin flex-center($type: block) {
+  @if $type == 'inline' {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  justify-content: center;
+  align-items: center;
+}
+
+// shape: square & circle
+@mixin shape($size, $type: square) {
+  width: $size;
+  height: $size;
+
+  @if $type != 'circle' {
+    @error "Unknown shape type '#{$type}'. Please use 'circle'";
+  } @else {
+    border-radius: 50%;
+  }
+}
+
+// visually-hidden
+@mixin visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
