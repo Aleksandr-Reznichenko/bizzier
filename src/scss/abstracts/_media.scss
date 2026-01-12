@@ -1,0 +1,35 @@
+@use 'functions' as fn;
+@use 'variables' as var;
+@use 'sass:list';
+@use 'sass:map';
+
+// media query min&max width
+@mixin mq($point, $type: min) {
+  $width: fn.rem(fn.breakpoint($point));
+
+  @if $type == max {
+    $width: $width - 0.02rem;
+  }
+
+  @media screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+// states (hover, focus, active)
+@mixin hover($active-on-touch: true) {
+  @media (any-hover: hover) {
+    &:hover,
+    &:focus-visible {
+      @content;
+    }
+  }
+
+  @if $active-on-touch {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}
