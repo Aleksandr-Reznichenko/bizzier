@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as var;
+
+@each $key, $value in var.$font-weights {
+  @font-face {
+    font-family: var.$font-family;
+    src: url('../../fonts/DMSans-#{$key}.woff2') format('woff2');
+    font-weight: $value;
+    font-style: normal;
+    font-display: swap;
+  }
+}
