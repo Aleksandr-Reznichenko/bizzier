@@ -1,0 +1,43 @@
+@use './functions' as fn;
+@use './mixins' as mx;
+
+// for headings and accents
+%text-primary-base {
+  font-weight: fn.fw(semibold);
+  line-height: fn.lh(tight);
+  color: fn.color(text-primary);
+}
+
+// for plain text
+%text-secondary-base {
+  font-weight: fn.fw(regular);
+  line-height: fn.lh(base);
+  color: fn.color(text-secondary);
+}
+
+%main-title {
+  @include mx.fluid-text(3xl, 5xl);
+  @extend %text-primary-base;
+}
+
+%section-title {
+  @include mx.fluid-text(2xl, 4xl);
+  @extend %text-primary-base;
+}
+
+%subtitle {
+  @include mx.fluid-text(lg, 2xl);
+  @extend %text-primary-base;
+}
+
+%main-text {
+  @include mx.fluid-text(sm, md);
+  @extend %text-secondary-base;
+}
+
+// truncate text with three dots
+%text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
