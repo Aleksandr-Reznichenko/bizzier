@@ -4,24 +4,28 @@
 
 @use 'sass:math';
 
-@use 'decimal' as d;
+@use '../abstracts/variables' as var;
+@use 'decimal' as *;
 
 @function fluid($min, $max) {
-  $minViewportWidth: 390;
-  $maxViewportWidth: 1440;
+  $min-size: math.div($min, var.$fs-base);
+  $max-size: math.div($max, var.$fs-base);
+  $min-width: math.div(var.$viewport-min, var.$fs-base);
+  $max-width: math.div(var.$viewport-max, var.$fs-base);
 
-  $minSize: math.div($min, 16);
-  $maxSize: math.div($max, 16);
-  $minWidth: math.div($minViewportWidth, 16);
-  $maxWidth: math.div($maxViewportWidth, 16);
+  $slope: math.div(($max-size - $min-size), ($max-width - $min-width));
+  $y-axis-intersection: -$min-width * $slope + $min-size;
 
-  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
-  $yAxisIntersection: -$minWidth * $slope + $minSize;
+  $dynamic-size: calc(
+    #{decimal-round($y-axis-intersection * 1rem, 3)} + #{decimal-round(
+        $slope * 100vw,
+        3
+      )}
+  );
 
   @return clamp(
-    d.decimal-round($minSize * 1rem, 3),
-    d.decimal-round($yAxisIntersection * 1rem, 3) +
-      d.decimal-round($slope * 100vw, 3),
-    d.decimal-round($maxSize * 1rem, 3)
+    #{decimal-round($min-size * 1rem, 3)},
+    #{$dynamic-size},
+    #{decimal-round($max-size * 1rem, 3)}
   );
 }
