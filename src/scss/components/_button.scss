@@ -1,0 +1,44 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+
+.btn {
+  @include mx.flex-center(inline);
+  @include mx.fluid-text(sm, md);
+  @extend %text-primary-base;
+
+  padding: fn.rem(16) fn.rem(24);
+
+  border: 1px solid fn.color(border);
+  border-radius: fn.rem(8);
+  background-color: transparent;
+
+  transition: color var.$duration var.$timing-fn,
+    border-color var.$duration var.$timing-fn,
+    background-color var.$duration var.$timing-fn;
+
+  @include m.hover {
+    color: fn.color(text-light);
+    border-color: transparent;
+    background-color: fn.color(accent-secondary);
+  }
+
+  &--accent {
+    color: fn.color(text-light);
+    border-color: transparent;
+    background-color: fn.color(accent-primary);
+  }
+
+  &--text {
+    padding: 0;
+    border: 0;
+    text-decoration: underline;
+
+    @include m.hover {
+      color: fn.color(accent-secondary);
+      background-color: transparent;
+    }
+  }
+}
