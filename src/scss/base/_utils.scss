@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.container {
+  max-width: fn.rem(calc(var.$container-width + var.$container-padding-x * 2));
+  margin-inline: auto;
+  padding-inline: fn.rem(var.$container-padding-x);
+}
+
+.section {
+  padding-block: fn.rem(fn.section-space(sm));
+
+  @include m.mq(tablet) {
+    padding-block: fn.rem(fn.section-space(md));
+  }
+
+  @include m.mq(desktop) {
+    padding-block: fn.rem(fn.section-space(lg));
+  }
+}
+
+.visually-hidden {
+  @include mx.visually-hidden;
+}
