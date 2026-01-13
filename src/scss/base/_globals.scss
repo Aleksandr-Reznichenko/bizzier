@@ -1,0 +1,19 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../vendors/fluid' as *;
+
+body {
+  @include mx.fluid-text(sm, md);
+
+  font-family: var.$font-family, sans-serif;
+  line-height: fn.lh(base);
+  color: fn.color(text-secondary);
+}
+
+:focus-visible {
+  outline: fn.rem(2) dashed fn.color(border);
+  outline-offset: fn.rem(4);
+  border-radius: fn.rem(2);
+}
