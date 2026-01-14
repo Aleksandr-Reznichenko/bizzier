@@ -14,6 +14,7 @@
   border: 1px solid fn.color(border);
   border-radius: fn.rem(8);
   background-color: transparent;
+  white-space: nowrap;
 
   transition: color var.$duration var.$timing-fn,
     border-color var.$duration var.$timing-fn,
