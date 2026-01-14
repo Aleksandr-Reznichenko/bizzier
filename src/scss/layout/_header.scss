@@ -1,0 +1,93 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fn.rem(28);
+  z-index: 10;
+
+  margin-top: fn.rem(24);
+
+  @include m.mq(tablet) {
+    height: fn.rem(54);
+    margin-bottom: fn.rem(56);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    column-gap: fn.rem(8);
+
+    font-weight: fn.fw(bold);
+    font-size: fn.rem(20);
+    color: fn.color(text-primary);
+
+    &-icon {
+      fill: fn.color(accent-primary);
+    }
+  }
+
+  &__wrapper {
+    @include m.mq(tablet, max) {
+      display: none;
+    }
+
+    @include m.mq(tablet) {
+      display: contents;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    column-gap: calc(fluid(16, 64) - fn.rem(20));
+  }
+
+  &__nav-link {
+    @extend %main-text;
+
+    padding: fn.rem(10);
+
+    &:not(.is-active) {
+      @include m.hover {
+        color: fn.color(accent-primary);
+      }
+
+      transition: color var.$duration var.$timing-fn;
+    }
+
+    &.is-active {
+      @extend %text-primary-base;
+
+      pointer-events: none;
+    }
+  }
+
+  &__menu {
+    @include m.mq(tablet) {
+      display: none;
+    }
+
+    &-icon {
+      fill: fn.color(text-primary);
+      transition: fill var.$duration var.$timing-fn;
+
+      @include m.hover {
+        fill: fn.color(accent-primary);
+      }
+    }
+  }
+}
