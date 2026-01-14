@@ -5,6 +5,7 @@ $viewport-max: 1440;
 // == breakpoints ==
 $breakpoints: (
   mobile: $viewport-min,
+  mobile-lg: 480,
   tablet: 768,
   laptop: 1024,
   desktop: $viewport-max,
