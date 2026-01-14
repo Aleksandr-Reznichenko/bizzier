@@ -1,7 +1,7 @@
 @use 'functions' as fn;
 @use '../vendors/fluid' as *;
 
-// clamp
+// fluid-text
 @mixin fluid-text($min, $max) {
   font-size: fluid(fn.fs($min), fn.fs($max));
 }
@@ -19,15 +19,15 @@
 }
 
 // shape: square & circle
-@mixin shape($size, $type: square) {
-  width: $size;
-  height: $size;
 
-  @if $type != 'circle' {
-    @error "Unknown shape type '#{$type}'. Please use 'circle'";
-  } @else {
-    border-radius: 50%;
-  }
+@mixin square($size) {
+  width: fn.rem($size);
+  height: fn.rem($size);
+}
+
+@mixin circle($size) {
+  @include square($size);
+  border-radius: 50%;
 }
 
 // visually-hidden
