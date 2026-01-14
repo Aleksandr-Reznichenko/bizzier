@@ -3,7 +3,7 @@
 @use 'sass:list';
 @use 'sass:map';
 
-// media query min&max width
+// mq: min / max breakpoint
 @mixin mq($point, $type: min) {
   $width: fn.rem(fn.breakpoint($point));
 
@@ -12,6 +12,16 @@
   }
 
   @media screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+// mq-between: range between breakpoints
+@mixin mq-between($min-point, $max-point) {
+  $min-width: fn.rem(fn.breakpoint($min-point));
+  $max-width: calc(fn.rem(fn.breakpoint($max-point)) - 0.02rem);
+
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
     @content;
   }
 }
