@@ -12,7 +12,7 @@
   padding: fn.rem(16) fn.rem(24);
 
   border: 1px solid fn.color(border);
-  border-radius: fn.rem(8);
+  border-radius: fn.rem(var.$radius-sm);
   background-color: transparent;
   white-space: nowrap;
 
