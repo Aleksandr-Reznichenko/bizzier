@@ -73,6 +73,11 @@ $section-space: (
   lg: 80,
 );
 
+// == border-radius ==
+$radius-sm: 8;
+$radius-md: 16;
+$radius-lg: 24;
+
 // == transition ==
 $duration: 250ms;
 $timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
