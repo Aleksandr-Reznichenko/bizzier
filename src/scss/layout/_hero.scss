@@ -50,7 +50,6 @@
     grid-area: badge;
 
     column-gap: fn.rem(10);
-    width: fit-content;
     margin-bottom: fn.rem(24);
 
     @include m.mq(laptop) {

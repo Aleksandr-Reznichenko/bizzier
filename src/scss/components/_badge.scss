@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+
+.badge {
+  @include mx.flex-center(inline);
+  @include mx.fluid-text(xs, md);
+
+  width: fit-content;
+  padding-block: fn.rem(4);
+  padding-inline: fn.rem(12);
+
+  font-weight: fn.fw(regular);
+  line-height: fn.lh(base);
+
+  color: fn.color(text-accent);
+  background-color: fn.color(bg-muted);
+  border-radius: fn.rem(var.$radius-lg);
+
+  &--hero {
+    padding-block: fn.rem(8);
+
+    @include m.mq(laptop) {
+      padding-inline: fn.rem(16);
+    }
+  }
+}
