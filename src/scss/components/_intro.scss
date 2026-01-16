@@ -1,0 +1,15 @@
+@use '../abstracts/functions' as fn;
+@use '../abstracts/media' as m;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  row-gap: fn.rem(12);
+
+  margin-bottom: fn.rem(32);
+
+  @include m.mq(laptop) {
+    row-gap: fn.rem(16);
+    margin-bottom: fn.rem(56);
+  }
+}
