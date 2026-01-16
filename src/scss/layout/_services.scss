@@ -1,0 +1,74 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/functions' as fn;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.services {
+  // Intro
+  &__intro {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  // Content
+
+  &__card-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(12, 40);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: fn.rem(32);
+
+    background-color: fn.color(bg-soft);
+
+    @include m.mq(tablet) {
+      flex-direction: row;
+      column-gap: fluid(5, 40);
+      row-gap: 0;
+    }
+  }
+
+  &__img {
+    margin-inline: auto;
+
+    @include m.mq-between(mobile-lg, tablet) {
+      width: 100%;
+      max-width: fn.rem(200);
+    }
+  }
+
+  // details
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  &__wrapper {
+    flex-grow: 1;
+    margin-bottom: fn.rem(24);
+  }
+
+  &__title {
+    @extend %subtitle;
+
+    margin-bottom: fluid(6, 12);
+  }
+
+  &__link {
+    @include m.mq(laptop) {
+      margin-left: auto;
+    }
+  }
+}
