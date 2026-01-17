@@ -81,3 +81,31 @@ $radius-lg: 24;
 // == transition ==
 $duration: 250ms;
 $timing-fn: cubic-bezier(0.4, 0, 0.2, 1);
+
+// == client logo sizes ==
+$client-logos: (
+  1: (
+    99,
+    131,
+  ),
+  2: (
+    73,
+    86,
+  ),
+  3: (
+    121,
+    178,
+  ),
+  4: (
+    97,
+    146,
+  ),
+  5: (
+    72,
+    118,
+  ),
+  6: (
+    92,
+    157,
+  ),
+);
