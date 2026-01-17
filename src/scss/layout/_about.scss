@@ -1,0 +1,107 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.about {
+  position: relative;
+  overflow: hidden;
+  padding-top: fn.rem(124);
+  padding-bottom: fluid(124, 223);
+
+  @include m.mq(laptop) {
+    padding-top: fn.rem(80);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    max-width: fn.rem(
+      calc(var.$container-width + var.$container-padding-x * 2)
+    );
+    margin-inline: auto;
+    padding-inline: fn.rem(var.$container-padding-x);
+
+    background-image:
+      url('../../images/about/gear.svg'),
+      url('../../images/about/specialist.svg'),
+      url('../../images/about/briefcase.svg'),
+      url('../../images/about/document.svg');
+
+    background-repeat: no-repeat;
+    background-size:
+      fluid(41, 62), fluid(55, 172), fluid(53, 155), fluid(52, 117);
+
+    background-position:
+      top fluid(55, 70) left fluid(26, 143),
+      top fn.rem(37) right fn.rem(28),
+      bottom fn.rem(50) left fluid(23, 58),
+      bottom fn.rem(25) right fn.rem(29);
+
+    @include m.mq(tablet) {
+      background-image:
+        url('../../images/about/gear.svg'),
+        url('../../images/about/document.svg'),
+        url('../../images/about/briefcase.svg'),
+        url('../../images/about/specialist.svg');
+
+      background-size:
+        fluid(41, 62), fluid(52, 117), fluid(53, 155), fluid(55, 172);
+
+      background-position:
+        top fluid(55, 70) left fluid(26, 143),
+        top fn.rem(44) right fn.rem(89),
+        bottom fn.rem(50) left fluid(23, 58),
+        bottom fluid(-25, 76) right fn.rem(35);
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__intro {
+    align-items: center;
+    text-align: center;
+
+    @include m.mq(laptop, max) {
+      margin-bottom: fn.rem(24);
+    }
+  }
+
+  &__title {
+    @extend %section-title;
+
+    max-width: fn.rem(760);
+
+    @include m.mq(tablet, max) {
+      max-width: fn.rem(408);
+    }
+
+    @include m.mq-between(tablet, laptop) {
+      max-width: fn.rem(620);
+    }
+  }
+
+  &__description {
+    @include mx.fluid-text(sm, lg);
+
+    margin-inline: auto;
+    text-align: center;
+
+    @include m.mq(laptop, max) {
+      max-width: fn.rem(540);
+    }
+
+    @include m.mq(laptop) {
+      max-width: fluid(700, 866);
+    }
+  }
+}
