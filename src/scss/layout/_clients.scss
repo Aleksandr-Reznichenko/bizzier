@@ -1,0 +1,38 @@
+@use 'sass:list';
+
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.clients {
+  padding-block: fluid(32, 64);
+  background-color: fn.color(bg-soft);
+
+  &__list {
+    @include mx.flex-center;
+    gap: fn.rem(32) fn.rem(64);
+    flex-wrap: wrap;
+    margin-inline: auto;
+
+    @include m.mq(tablet, max) {
+      max-width: fn.rem(600);
+    }
+
+    @include m.mq-between(tablet, laptop) {
+      max-width: fn.rem(680);
+    }
+
+    @include m.mq(laptop) {
+      justify-content: space-between;
+      column-gap: fn.rem(32);
+    }
+  }
+
+  @each $key, $value in var.$client-logos {
+    &__logo-0#{$key} {
+      width: fluid(list.nth($value, 1), list.nth($value, 2));
+    }
+  }
+}
