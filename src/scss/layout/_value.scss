@@ -1,0 +1,127 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.value {
+  padding-block: fluid(80, 128) fluid(80, 160);
+
+  // Intro
+  &__intro {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  // Content
+
+  &__content {
+    display: grid;
+    row-gap: fn.rem(40);
+    justify-items: center;
+
+    @include m.mq(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: fn.rem(20);
+      align-items: center;
+    }
+
+    @include m.mq(laptop) {
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      justify-items: start;
+    }
+
+    @include m.mq(desktop) {
+      column-gap: fn.rem(86);
+    }
+  }
+
+  &__img {
+    margin-inline: auto;
+
+    @include m.mq-between(mobile, tablet) {
+      max-width: fn.rem(358);
+    }
+
+    @include m.mq(laptop) {
+      grid-column: 2;
+      grid-row: 1 / -1;
+    }
+  }
+
+  &__list {
+    display: contents;
+    counter-reset: item;
+
+    @include m.mq(laptop, max) {
+      display: grid;
+      row-gap: fn.rem(32);
+    }
+
+    @include m.mq-between(tablet, laptop) {
+      row-gap: fluid(16, 32);
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: fn.rem(40);
+    align-items: center;
+
+    counter-increment: item;
+
+    @include m.mq-between(tablet, laptop) {
+      column-gap: fluid(16, 24);
+    }
+
+    @include m.mq(laptop) {
+      &:nth-child(1),
+      &:nth-child(3) {
+        grid-row: 1;
+        align-self: start;
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        grid-row: 2;
+        align-self: end;
+      }
+
+      grid-template-columns: 1fr;
+      row-gap: fn.rem(16);
+      column-gap: 0;
+    }
+  }
+
+  &__item::before {
+    @include mx.flex-center;
+    @include mx.fluid-text(md, xl);
+    @include mx.square(38);
+
+    content: counter(item, decimal-leading-zero);
+
+    font-weight: fn.fw(semibold);
+    line-height: 0;
+
+    border-radius: fn.rem(8);
+    box-shadow: fn.rem(8) fn.rem(8) 0 0 fn.color(shadow);
+    color: fn.color(text-light);
+    background-color: fn.color(accent-primary);
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+
+    margin-bottom: fluid(6, 10);
+  }
+
+  &__text {
+    @include mx.fluid-text(xs, md);
+  }
+}
