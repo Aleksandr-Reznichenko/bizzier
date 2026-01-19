@@ -29,8 +29,8 @@
 // states (hover, focus, active)
 @mixin hover($active-on-touch: true) {
   @media (any-hover: hover) {
-    &:hover,
-    &:focus-visible {
+    &:not(:disabled):hover,
+    &:not(:disabled):focus-visible {
       @content;
     }
   }
