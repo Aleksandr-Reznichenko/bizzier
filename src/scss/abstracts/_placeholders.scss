@@ -34,10 +34,3 @@
   @include mx.fluid-text(sm, md);
   @extend %text-secondary-base;
 }
-
-// truncate text with three dots
-%text-truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
