@@ -1,0 +1,213 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.studies {
+  &__inner {
+    padding-inline: fluid(16, 80);
+    border-radius: fn.rem(24);
+    background-color: fn.color(bg-soft);
+  }
+
+  // Intro
+  &__intro {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__card-list {
+    display: grid;
+    row-gap: fluid(24, 42);
+
+    margin-bottom: fluid(32, 56);
+  }
+
+  &__card {
+    display: grid;
+    row-gap: fn.rem(24);
+
+    padding: fn.rem(32);
+    background-color: fn.color(bg-primary);
+
+    @include m.mq(tablet) {
+      grid-template-columns: auto 1fr;
+      column-gap: fluid(24, 40);
+    }
+
+    &.is-active {
+      background-color: fn.color(bg-muted);
+    }
+  }
+
+  &__img {
+    margin-inline: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  // details
+
+  &__details {
+    margin-bottom: fluid(24, 93);
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+
+    margin-bottom: fn.rem(12);
+  }
+
+  &__text {
+    @include m.mq(laptop, max) {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // stats
+  &__stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: fn.rem(24);
+    column-gap: fn.rem(48);
+  }
+
+  &__metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: fn.rem(24);
+    flex-basis: fn.rem(300);
+  }
+
+  &__metric-value {
+    @include mx.fluid-text(lg, 2xl);
+
+    margin-bottom: fluid(6, 8);
+    font-weight: fn.fw(semibold);
+    line-height: fn.lh(tight);
+    color: fn.color(text-primary);
+  }
+
+  &__metric-label {
+    @include mx.fluid-text(xs, sm);
+
+    font-weight: fn.fw(regular);
+    line-height: fn.lh(base);
+  }
+
+  &__link {
+    @include m.mq(laptop, max) {
+      display: none;
+    }
+  }
+
+  &__card.is-active &__text {
+    -webkit-line-clamp: unset;
+  }
+
+  &__card.is-active &__link {
+    display: block;
+
+    color: fn.color(text-light);
+    border-color: transparent;
+    background-color: fn.color(accent-secondary);
+  }
+}
+
+// pagination
+.pagination {
+  @include mx.flex-center;
+
+  column-gap: fluid(16, 24);
+
+  // buttons
+  &__prev,
+  &__next {
+    @include mx.flex-center;
+    @include mx.circle(42);
+
+    background-color: fn.color(bg-primary);
+    transition: background-color var.$duration var.$timing-fn;
+
+    @include m.mq(laptop) {
+      @include mx.circle(50);
+    }
+
+    @include m.hover {
+      background-color: fn.color(bg-muted);
+    }
+  }
+
+  &__prev {
+    transform: rotate(180deg);
+  }
+  &__prev:disabled {
+    cursor: not-allowed;
+  }
+  &__prev:disabled &__icon {
+    fill: fn.color(text-muted);
+  }
+
+  &__icon {
+    fill: fn.color(text-primary);
+  }
+
+  // list of pages
+
+  &__list {
+    @include mx.flex-center;
+
+    column-gap: fluid(10, 16);
+  }
+
+  &__page {
+    @include mx.flex-center;
+    @include mx.square(42);
+    @include mx.fluid-text(md, lg);
+
+    cursor: pointer;
+
+    font-weight: fn.fw(regular);
+    line-height: fn.lh(tight);
+
+    border-radius: fn.rem(var.$radius-sm);
+    color: fn.color(text-muted);
+    background-color: fn.color(bg-primary);
+
+    transition:
+      color var.$duration var.$timing-fn,
+      background-color var.$duration var.$timing-fn;
+
+    @include m.mq(laptop) {
+      @include mx.square(50);
+    }
+
+    @include m.hover {
+      color: fn.color(text-secondary);
+      background-color: fn.color(bg-muted);
+    }
+  }
+
+  &__page.is-active {
+    pointer-events: none;
+    font-weight: fn.fw(semibold);
+
+    color: fn.color(text-light);
+    background-color: fn.color(accent-primary);
+  }
+}
