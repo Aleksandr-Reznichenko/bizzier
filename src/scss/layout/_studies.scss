@@ -12,16 +12,7 @@
     background-color: fn.color(bg-soft);
   }
 
-  // Intro
-  &__intro {
-    align-items: center;
-    text-align: center;
-  }
-
-  &__title {
-    @extend %section-title;
-  }
-
+  // Content
   &__card-list {
     display: grid;
     row-gap: fluid(24, 42);
@@ -118,6 +109,7 @@
 
   &__card.is-active &__text {
     -webkit-line-clamp: unset;
+    line-clamp: unset;
   }
 
   &__card.is-active &__link {
