@@ -4,18 +4,7 @@
 @use '../vendors/fluid' as *;
 
 .services {
-  // Intro
-  &__intro {
-    align-items: center;
-    text-align: center;
-  }
-
-  &__title {
-    @extend %section-title;
-  }
-
   // Content
-
   &__card-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
