@@ -68,17 +68,12 @@
   }
 
   &__intro {
-    align-items: center;
-    text-align: center;
-
     @include m.mq(laptop, max) {
       margin-bottom: fn.rem(24);
     }
   }
 
   &__title {
-    @extend %section-title;
-
     max-width: fn.rem(760);
 
     @include m.mq(tablet, max) {
