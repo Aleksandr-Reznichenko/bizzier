@@ -7,18 +7,7 @@
 .value {
   padding-block: fluid(80, 128) fluid(80, 160);
 
-  // Intro
-  &__intro {
-    align-items: center;
-    text-align: center;
-  }
-
-  &__title {
-    @extend %section-title;
-  }
-
   // Content
-
   &__content {
     display: grid;
     row-gap: fn.rem(40);
