@@ -1,0 +1,114 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.process {
+  padding-block: fluid(80, 128) fluid(40, 80);
+
+  // Content
+  &__list {
+    display: grid;
+    row-gap: fn.rem(32);
+    justify-content: center;
+
+    @include m.mq(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: fn.rem(32);
+    }
+
+    @include m.mq-between(tablet, laptop) {
+      margin-inline: auto;
+      max-width: fn.rem(880);
+    }
+
+    @include m.mq(laptop) {
+      grid-template-columns: repeat(4, minmax(auto, fn.rem(260)));
+      justify-content: space-between;
+      align-items: start;
+      column-gap: fn.rem(16);
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: fn.rem(68) 1fr;
+    align-items: center;
+    column-gap: fn.rem(12);
+
+    @include m.mq(laptop) {
+      grid-template-columns: 1fr;
+    }
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+
+      top: 100%;
+      left: 0;
+      width: fn.rem(68);
+      height: fn.rem(4);
+      transform: rotate(-90deg);
+
+      background-image: url('../../images/process/line.svg');
+
+      @include m.mq-between(tablet, laptop) {
+        display: none;
+      }
+
+      @include m.mq(laptop) {
+        top: fn.rem(90);
+        left: fn.rem(180);
+        width: 100%;
+
+        transform: rotate(0deg);
+      }
+    }
+
+    &:nth-child(-n + 2)::after {
+      @include m.mq-between(tablet, laptop) {
+        display: block;
+      }
+    }
+  }
+
+  &__wrap-img {
+    margin-inline: auto;
+    z-index: 2;
+
+    background-color: fn.color(bg-primary);
+
+    @include m.mq(laptop, max) {
+      @include mx.flex-center;
+    }
+
+    @include m.mq(laptop) {
+      margin-bottom: fn.rem(12);
+    }
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+    @include mx.fluid-text(lg, xl);
+
+    margin-bottom: fluid(8, 12);
+
+    @include m.mq(laptop) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include mx.fluid-text(xs, md);
+
+    font-weight: fn.fw(regular);
+    line-height: fn.lh(base);
+
+    @include m.mq(laptop) {
+      text-align: center;
+    }
+  }
+}
