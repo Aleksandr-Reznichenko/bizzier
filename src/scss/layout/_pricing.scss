@@ -1,0 +1,126 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.pricing {
+  padding-block: fluid(40, 80) fluid(80, 128);
+
+  // Content
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(auto, 358px);
+    justify-content: center;
+    gap: fn.rem(12);
+
+    @include m.mq(tablet) {
+      grid-template-columns: repeat(3, minmax(auto, 420px));
+      justify-content: space-between;
+      align-items: end;
+    }
+  }
+
+  &__card {
+    background-color: fn.color(bg-soft);
+  }
+
+  &__card--accent {
+    background-color: fn.color(bg-muted);
+  }
+
+  &__card--accent &__wrapper-icon,
+  &__card--accent &__btn {
+    background-color: fn.color(accent-secondary);
+  }
+
+  &__card--accent &__benefit-icon {
+    fill: fn.color(accent-secondary);
+  }
+
+  // info
+  &__info {
+    margin-bottom: fn.rem(32);
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: fluid(32, 40);
+  }
+
+  &__wrapper-icon {
+    @include mx.flex-center;
+    @include mx.square(36);
+
+    border-radius: fn.rem(8);
+    background-color: fn.color(accent-primary);
+    box-shadow: 8px 8px 0 0 fn.color(shadow);
+  }
+
+  &__icon {
+    width: fluid(12, 16);
+    fill: fn.color(bg-primary);
+  }
+
+  &__tag {
+    padding: fn.rem(10) fn.rem(16);
+    border-radius: fn.rem(24);
+    background-color: fn.color(bg-primary);
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+
+    margin-bottom: fn.rem(8);
+  }
+
+  &__text {
+    margin-bottom: fluid(16, 24);
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    column-gap: fluid(6, 8);
+
+    padding-bottom: fluid(16, 24);
+    border-bottom: 1px solid fn.color(line);
+
+    &-amount {
+      @include mx.fluid-text(3xl, 4xl);
+
+      font-weight: fn.fw(semibold);
+      line-height: fn.lh(tight);
+      color: fn.color(text-primary);
+    }
+  }
+
+  // list of benefits
+  &__benefits {
+    display: grid;
+    row-gap: fluid(12, 16);
+
+    margin-bottom: fn.rem(32);
+  }
+
+  &__benefit {
+    @include mx.fluid-text(xs, sm);
+
+    display: flex;
+    align-items: center;
+    column-gap: fn.rem(16);
+
+    &-icon {
+      width: fluid(16, 18);
+      fill: fn.color(accent-primary);
+    }
+  }
+
+  // button
+  &__btn {
+    width: 100%;
+  }
+}
