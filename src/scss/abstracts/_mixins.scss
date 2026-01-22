@@ -21,8 +21,8 @@
 // shape: square & circle
 
 @mixin square($size) {
-  width: fn.rem($size);
-  height: fn.rem($size);
+  width: $size;
+  height: $size;
 }
 
 @mixin circle($size) {
