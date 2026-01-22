@@ -58,13 +58,9 @@
   }
 
   &__badge-icon {
-    @include mx.square(14);
+    @include mx.square(fluid(14, 16));
 
     fill: fn.color(text-accent);
-
-    @include m.mq(tablet) {
-      @include mx.square(16);
-    }
   }
 
   // Main info

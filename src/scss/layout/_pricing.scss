@@ -53,7 +53,7 @@
 
   &__wrapper-icon {
     @include mx.flex-center;
-    @include mx.square(36);
+    @include mx.square(fluid(36, 40));
 
     border-radius: fn.rem(8);
     background-color: fn.color(accent-primary);

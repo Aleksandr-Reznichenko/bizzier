@@ -131,14 +131,10 @@
   &__prev,
   &__next {
     @include mx.flex-center;
-    @include mx.circle(42);
+    @include mx.circle(fluid(42, 50));
 
     background-color: fn.color(bg-primary);
     transition: background-color var.$duration var.$timing-fn;
-
-    @include m.mq(laptop) {
-      @include mx.circle(50);
-    }
 
     @include m.hover {
       background-color: fn.color(bg-muted);
@@ -146,7 +142,7 @@
   }
 
   &__prev {
-    transform: rotate(180deg);
+    rotate: 180deg;
   }
   &__prev:disabled {
     cursor: not-allowed;
@@ -169,7 +165,7 @@
 
   &__page {
     @include mx.flex-center;
-    @include mx.square(42);
+    @include mx.square(fluid(42, 50));
     @include mx.fluid-text(md, lg);
 
     cursor: pointer;
@@ -184,10 +180,6 @@
     transition:
       color var.$duration var.$timing-fn,
       background-color var.$duration var.$timing-fn;
-
-    @include m.mq(laptop) {
-      @include mx.square(50);
-    }
 
     @include m.hover {
       color: fn.color(text-secondary);

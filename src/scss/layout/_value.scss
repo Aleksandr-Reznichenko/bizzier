@@ -91,7 +91,7 @@
   &__item::before {
     @include mx.flex-center;
     @include mx.fluid-text(md, xl);
-    @include mx.square(38);
+    @include mx.square(fluid(38, 48));
 
     content: counter(item, decimal-leading-zero);
 
@@ -102,10 +102,6 @@
     box-shadow: fn.rem(8) fn.rem(8) 0 0 fn.color(shadow);
     color: fn.color(text-light);
     background-color: fn.color(accent-primary);
-
-    @include m.mq(laptop) {
-      @include mx.square(48);
-    }
   }
 
   &__subtitle {
