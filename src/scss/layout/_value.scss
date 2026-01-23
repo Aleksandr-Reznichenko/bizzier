@@ -1,4 +1,5 @@
 @use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
 @use '../abstracts/functions' as fn;
 @use '../abstracts/mixins' as mx;
 @use '../abstracts/media' as m;
@@ -98,7 +99,7 @@
     font-weight: fn.fw(semibold);
     line-height: 0;
 
-    border-radius: fn.rem(8);
+    border-radius: fn.rem(var.$radius-sm);
     box-shadow: fn.rem(8) fn.rem(8) 0 0 fn.color(shadow);
     color: fn.color(text-light);
     background-color: fn.color(accent-primary);

@@ -1,4 +1,5 @@
 @use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
 @use '../abstracts/functions' as fn;
 @use '../abstracts/mixins' as mx;
 @use '../abstracts/media' as m;
@@ -55,7 +56,7 @@
     @include mx.flex-center;
     @include mx.square(fluid(36, 40));
 
-    border-radius: fn.rem(8);
+    border-radius: fn.rem(var.$radius-sm);
     background-color: fn.color(accent-primary);
     box-shadow: 8px 8px 0 0 fn.color(shadow);
   }
@@ -67,7 +68,7 @@
 
   &__tag {
     padding: fn.rem(10) fn.rem(16);
-    border-radius: fn.rem(24);
+    border-radius: fn.rem(var.$radius-lg);
     background-color: fn.color(bg-primary);
   }
 

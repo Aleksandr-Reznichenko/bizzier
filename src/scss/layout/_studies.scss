@@ -8,7 +8,7 @@
 .studies {
   &__inner {
     padding-inline: fluid(16, 80);
-    border-radius: fn.rem(24);
+    border-radius: fn.rem(var.$radius-lg);
     background-color: fn.color(bg-soft);
   }
 
