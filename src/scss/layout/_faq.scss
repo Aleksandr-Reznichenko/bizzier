@@ -51,12 +51,15 @@
   }
 
   &__details {
-    padding: fn.rem(24) fn.rem(32);
     border-radius: fn.rem(var.$radius-sm);
     background-color: fn.color(bg-soft);
 
     &[open] {
       background-color: fn.color(bg-muted);
+
+      .faq__question {
+        padding-bottom: fluid(6, 8);
+      }
 
       .faq__icon--plus {
         display: none;
@@ -77,6 +80,8 @@
     align-items: center;
     column-gap: fn.rem(16);
 
+    padding: fn.rem(24) fn.rem(32);
+
     // hide the standard arrow
     list-style: none;
     &::-webkit-details-marker {
@@ -96,7 +101,8 @@
   }
 
   &__wrapper {
-    padding-top: fluid(12, 16);
+    padding-block: fluid(6, 8) fn.rem(24);
+    padding-inline: fn.rem(32);
   }
 
   // contact
