@@ -1,0 +1,121 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.faq {
+  padding-block: fluid(80, 128) fluid(80, 160);
+
+  //  Intro
+  &__intro {
+    display: grid;
+    row-gap: fn.rem(16);
+
+    margin-bottom: fluid(32, 56);
+  }
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__description {
+    @extend %main-text;
+  }
+
+  // Content
+  &__content {
+    @include m.mq(tablet) {
+      display: grid;
+      grid-template-columns: 1.6fr 2fr;
+      column-gap: fluid(16, 88);
+      grid-template-areas: 'contact list';
+    }
+
+    @include m.mq(laptop) {
+      grid-template-columns: 1.6fr 3fr;
+    }
+  }
+
+  // list questions/answers
+  &__list {
+    display: grid;
+    row-gap: fn.rem(10);
+    grid-area: list;
+    height: fit-content;
+
+    @include m.mq(tablet, max) {
+      margin-bottom: fn.rem(56);
+    }
+  }
+
+  &__details {
+    padding: fn.rem(24) fn.rem(32);
+    border-radius: fn.rem(var.$radius-sm);
+    background-color: fn.color(bg-soft);
+
+    &[open] {
+      background-color: fn.color(bg-muted);
+
+      .faq__icon--plus {
+        display: none;
+      }
+
+      .faq__icon--minus {
+        display: block;
+      }
+    }
+  }
+
+  &__question {
+    @extend %text-primary-base;
+    @include mx.fluid-text(md, lg);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: fn.rem(16);
+
+    // hide the standard arrow
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__icon {
+    @include mx.flex-center;
+    @include mx.square(18);
+
+    fill: currentColor;
+
+    &--minus {
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    padding-top: fluid(12, 16);
+  }
+
+  // contact
+  &__contact {
+    grid-area: contact;
+  }
+
+  &__img {
+    margin-inline: auto;
+    margin-bottom: fn.rem(50);
+  }
+
+  &__subtitle {
+    @extend %subtitle;
+
+    margin-bottom: fn.rem(12);
+  }
+
+  &__text {
+    margin-bottom: fn.rem(24);
+  }
+}
