@@ -11,17 +11,42 @@
   //  Intro
   &__intro {
     display: grid;
-    row-gap: fn.rem(16);
+    gap: fn.rem(16);
 
     margin-bottom: fluid(32, 56);
+
+    @include m.mq(laptop) {
+      grid-template-columns: fn.rem(500) fn.rem(438);
+      grid-template-rows: repeat(2, auto);
+      justify-content: space-between;
+      align-items: end;
+
+      grid-template-areas:
+        'badge badge'
+        'title description';
+    }
+  }
+
+  &__badge {
+    @include m.mq(laptop) {
+      grid-area: badge;
+    }
   }
 
   &__title {
     @extend %section-title;
+
+    @include m.mq(laptop) {
+      grid-area: title;
+    }
   }
 
   &__description {
     @extend %main-text;
+
+    @include m.mq(laptop) {
+      grid-area: description;
+    }
   }
 
   // Content
