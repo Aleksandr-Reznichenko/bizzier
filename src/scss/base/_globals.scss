@@ -14,7 +14,7 @@ body {
 }
 
 :focus-visible {
-  outline: fn.rem(2) dashed fn.color(border);
+  outline: 2px dashed fn.color(border);
   outline-offset: fn.rem(4);
   border-radius: fn.rem(2);
 }
