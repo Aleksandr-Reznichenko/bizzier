@@ -107,6 +107,7 @@
       display: flex;
       align-items: center;
       column-gap: fn.rem(16);
+      width: max-content;
     }
 
     &-checkmark {
