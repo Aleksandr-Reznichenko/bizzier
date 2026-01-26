@@ -138,8 +138,12 @@
       </ul>
 
       <!-- pagination -->
-      <div class="pagination">
-        <button class="pagination__prev" type="button" disabled>
+      <nav class="pagination" aria-label="Results pagination">
+        <button
+          class="pagination__prev"
+          type="button"
+          aria-label="Previous page"
+          disabled>
           <svg
             class="pagination__icon"
             aria-hidden="true"
@@ -149,13 +153,13 @@
           </svg>
         </button>
 
-        <ul class="pagination__list list">
+        <ul class="pagination__list">
           <li class="pagination__page is-active">1</li>
           <li class="pagination__page">2</li>
           <li class="pagination__page">3</li>
         </ul>
 
-        <button class="pagination__next" type="button">
+        <button class="pagination__next" type="button" aria-label="Next page">
           <svg
             class="pagination__icon"
             aria-hidden="true"
@@ -164,7 +168,7 @@
             <use href="./src/images/sprite.svg#icon-arrow"></use>
           </svg>
         </button>
-      </div>
+      </nav>
     </div>
   </div>
 </section>
