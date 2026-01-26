@@ -1,0 +1,260 @@
+@use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
+@use '../abstracts/functions' as fn;
+@use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
+@use '../vendors/fluid' as *;
+
+.footer {
+  color: fn.color(text-light-muted);
+  background-color: fn.color(bg-secondary);
+
+  :focus-visible {
+    outline-color: fn.color(text-light-muted);
+  }
+
+  &__inner {
+    padding-top: fluid(24, 50);
+  }
+
+  // Content
+  &__content {
+    margin-bottom: fluid(56, 64);
+  }
+
+  // Top
+  &__top {
+    display: grid;
+    row-gap: fn.rem(24);
+
+    margin-bottom: fluid(50, 80);
+
+    @include m.mq(laptop) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      gap: fn.rem(0) fn.rem(24);
+    }
+
+    @include m.mq(desktop) {
+      grid-template-columns: fn.rem(693) fn.rem(564);
+    }
+  }
+
+  &__title {
+    @include mx.fluid-text(xl, 4xl);
+
+    font-weight: fn.fw(semibold);
+    line-height: fn.lh(tight);
+  }
+
+  // form
+  &__form {
+    @include m.mq(laptop, max) {
+      max-width: fn.rem(564);
+    }
+  }
+
+  &__field {
+    margin-bottom: fn.rem(16);
+  }
+
+  &__form-group {
+    display: flex;
+    align-items: center;
+    column-gap: fn.rem(16);
+
+    padding: fn.rem(8) fn.rem(10) fn.rem(8) fn.rem(24);
+
+    border-radius: fn.rem(var.$radius-md);
+    background-color: fn.color(bg-primary);
+
+    @include m.mq(laptop) {
+      padding-block: fn.rem(10);
+    }
+
+    &:focus-within {
+      outline-offset: fn.rem(4);
+      outline: 1px dashed fn.color(text-light-muted);
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    border: none;
+
+    color: fn.color(text-secondary);
+    background-color: transparent;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__input::placeholder {
+    color: fn.color(text-muted);
+  }
+
+  &__btn {
+    &:focus-visible {
+      outline-offset: fn.rem(4);
+      outline: 2px dashed fn.color(border);
+    }
+  }
+
+  // policy
+  &__policy {
+    &-label {
+      display: flex;
+      align-items: center;
+      column-gap: fn.rem(16);
+    }
+
+    &-checkmark {
+      @include mx.flex-center(inline);
+      @include mx.square(fluid(24, 28));
+
+      flex-shrink: 0;
+      cursor: pointer;
+
+      border: 1px solid fn.color(text-light);
+      border-radius: fn.rem(var.$radius-sm);
+    }
+
+    &-checkmark-icon {
+      fill: transparent;
+      transition: fill var.$duration var.$timing-fn;
+    }
+
+    &-checkbox:checked + &-label &-checkmark-icon {
+      fill: fn.color(text-light);
+    }
+
+    &-checkbox:focus-visible + &-label > &-checkmark {
+      outline-offset: fn.rem(4);
+      outline: 1px dashed fn.color(text-light-muted);
+    }
+
+    &-text {
+      @include mx.fluid-text(xs, sm);
+
+      font-weight: fn.fw(regular);
+      line-height: fn.lh(base);
+      color: fn.color(text-light);
+    }
+
+    &-link {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+
+  // Main
+  &__main {
+    display: grid;
+    row-gap: fn.rem(40);
+
+    padding: fn.rem(40) fn.rem(24) 0;
+    border-top: 1px solid fn.color(line-footer);
+
+    @include m.mq(tablet) {
+      grid-template-columns: fn.rem(250) minmax(auto, fn.rem(450));
+      justify-content: space-between;
+      align-items: end;
+      column-gap: fn.rem(50);
+    }
+
+    @include m.mq(laptop) {
+      grid-template-columns: fn.rem(405) minmax(auto, fn.rem(564));
+      column-gap: fn.rem(80);
+    }
+  }
+
+  // logotype
+  &__logo {
+    @include mx.fluid-text(3xl, 4xl);
+
+    display: inline-flex;
+    align-items: center;
+    gap: fn.rem(12);
+
+    margin-bottom: fn.rem(8);
+    font-weight: fn.fw(bold);
+    color: fn.color(bg-primary);
+
+    &-icon {
+      fill: currentColor;
+    }
+  }
+
+  // groups links
+  &__groups {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+    row-gap: fn.rem(40);
+
+    grid-template-areas:
+      'nav social'
+      'contacts contacts';
+
+    @include m.mq(mobile-lg) {
+      grid-template-columns: repeat(3, auto);
+      column-gap: fn.rem(20);
+      grid-template-areas: 'nav social contacts';
+    }
+  }
+
+  // navigation
+  &__nav {
+    grid-area: nav;
+  }
+
+  // social links
+  &__social-list {
+    grid-area: social;
+  }
+
+  &__nav-list,
+  &__social-list {
+    display: grid;
+    row-gap: fluid(12, 16);
+
+    min-width: fn.rem(80);
+  }
+
+  // contacts
+  &__contacts {
+    grid-area: contacts;
+    margin-inline: auto;
+    font-style: normal;
+
+    &-list {
+      display: grid;
+      row-gap: fn.rem(16);
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      column-gap: fn.rem(16);
+    }
+  }
+
+  &__nav-link,
+  &__social-link,
+  &__contacts-text {
+    border-bottom: 1px solid transparent; // створюємо невидиму лінію
+    transition: border-color var.$duration var.$timing-fn;
+
+    @include m.hover {
+      border-color: currentColor;
+    }
+  }
+
+  // Copyright
+  &__copyright {
+    padding-block: fn.rem(24);
+    border-top: 1px solid fn.color(line-footer);
+    text-align: center;
+  }
+}
