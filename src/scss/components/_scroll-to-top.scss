@@ -1,9 +1,12 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/functions' as fn;
 @use '../abstracts/mixins' as mx;
+@use '../abstracts/media' as m;
 @use '../vendors/fluid' as *;
 
 .scroll-to-top {
+  $duration: 500ms;
+
   @include mx.flex-center;
   @include mx.circle(fluid(30, 40));
 
@@ -20,8 +23,13 @@
   background-color: fn.color(accent-primary);
 
   transition:
-    opacity 500ms var.$timing-fn,
-    transform 500ms var.$timing-fn;
+    opacity $duration var.$timing-fn,
+    transform $duration var.$timing-fn,
+    background-color var.$duration var.$timing-fn;
+
+  @include m.hover {
+    background-color: fn.color(accent-secondary);
+  }
 
   &--visible {
     opacity: 1;
