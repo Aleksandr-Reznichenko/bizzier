@@ -6,6 +6,8 @@
 @use '../vendors/fluid' as *;
 
 .pricing {
+  $duration: 500ms;
+
   padding-block: fluid(40, 80) fluid(80, 128);
 
   // Content
@@ -20,10 +22,35 @@
       justify-content: space-between;
       align-items: end;
     }
+
+    &:has(.pricing__card:not(.pricing__card--accent):hover)
+      .pricing__card--accent {
+      background-color: fn.color(bg-soft);
+
+      .pricing__wrapper-icon,
+      .pricing__btn {
+        background-color: fn.color(accent-primary);
+      }
+
+      .pricing__benefit-icon {
+        fill: fn.color(accent-primary);
+      }
+    }
   }
 
   &__card {
     background-color: fn.color(bg-soft);
+    transition: background-color $duration var.$timing-fn;
+
+    @include m.hover {
+      .pricing__wrapper-icon,
+      .pricing__btn {
+        background-color: fn.color(accent-secondary);
+      }
+      .pricing__benefit-icon {
+        fill: fn.color(accent-secondary);
+      }
+    }
   }
 
   &__card--accent {
@@ -59,6 +86,8 @@
     border-radius: fn.rem(var.$radius-sm);
     background-color: fn.color(accent-primary);
     box-shadow: 8px 8px 0 0 fn.color(shadow);
+
+    transition: background-color $duration var.$timing-fn;
   }
 
   &__icon {
@@ -117,11 +146,14 @@
     &-icon {
       width: fluid(16, 18);
       fill: fn.color(accent-primary);
+
+      transition: fill $duration var.$timing-fn;
     }
   }
 
   // button
   &__btn {
     width: 100%;
+    transition: background-color $duration var.$timing-fn;
   }
 }
