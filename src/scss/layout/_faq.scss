@@ -6,6 +6,10 @@
 @use '../vendors/fluid' as *;
 
 .faq {
+  // == transition ==
+  $duration: 500ms;
+  $timing-fn: ease;
+
   padding-block: fluid(80, 128) fluid(80, 160);
 
   //  Intro
@@ -79,20 +83,34 @@
     border-radius: fn.rem(var.$radius-sm);
     background-color: fn.color(bg-soft);
 
+    transition: background-color $duration $timing-fn;
+
     &[open] {
       background-color: fn.color(bg-muted);
-
-      .faq__question {
-        padding-bottom: fluid(6, 8);
-      }
 
       .faq__icon--plus {
         display: none;
       }
-
       .faq__icon--minus {
         display: block;
       }
+    }
+
+    &::details-content {
+      display: block;
+      block-size: 0;
+      overflow: hidden;
+      padding-block: 0;
+
+      transition:
+        block-size $duration $timing-fn,
+        padding-block $duration $timing-fn,
+        content-visibility $duration allow-discrete;
+    }
+
+    &[open]::details-content {
+      block-size: calc-size(auto, size);
+      padding-block: 0 fn.rem(24);
     }
   }
 
@@ -126,7 +144,6 @@
   }
 
   &__wrapper {
-    padding-block: fluid(6, 8) fn.rem(24);
     padding-inline: fn.rem(32);
   }
 
