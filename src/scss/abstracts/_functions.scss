@@ -73,12 +73,3 @@
 
   @return map.get(var.$line-heights, $key);
 }
-
-// get section-padding
-@function section-space($key) {
-  @if not map.has-key(var.$section-space, $key) {
-    @error "Value #{$key} not found in #{$section-space} map!";
-  }
-
-  @return map.get(var.$section-space, $key);
-}
