@@ -11,15 +11,7 @@
 }
 
 .section {
-  padding-block: fn.rem(fn.section-space(sm));
-
-  @include m.mq(tablet) {
-    padding-block: fn.rem(fn.section-space(md));
-  }
-
-  @include m.mq(desktop) {
-    padding-block: fn.rem(fn.section-space(lg));
-  }
+  padding-block: fluid(40, 60);
 }
 
 .visually-hidden {
