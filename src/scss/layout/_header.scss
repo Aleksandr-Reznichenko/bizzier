@@ -60,13 +60,12 @@
     @extend %main-text;
 
     padding: fn.rem(10);
+    transition: color var.$duration var.$timing-fn;
 
     &:not(.is-active) {
       @include m.hover {
         color: fn.color(accent-primary);
       }
-
-      transition: color var.$duration var.$timing-fn;
     }
 
     &.is-active {
