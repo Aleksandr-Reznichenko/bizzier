@@ -6,6 +6,9 @@
 @use '../vendors/fluid' as *;
 
 .studies {
+  $duration: 500ms;
+  $timing-fn: ease;
+
   &__inner {
     padding-inline: fluid(16, 80);
     border-radius: fn.rem(var.$radius-lg);
@@ -27,9 +30,18 @@
     padding: fn.rem(32);
     background-color: fn.color(bg-primary);
 
+    transition:
+      background-color var.$duration var.$timing-fn,
+      opacity $duration $timing-fn;
+
     @include m.mq(tablet) {
       grid-template-columns: auto 1fr;
       column-gap: fluid(24, 40);
+    }
+
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
     }
 
     &.is-active {
@@ -139,16 +151,17 @@
     @include m.hover {
       background-color: fn.color(bg-muted);
     }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+    &:disabled &__icon {
+      fill: fn.color(text-muted);
+    }
   }
 
   &__prev {
     rotate: 180deg;
-  }
-  &__prev:disabled {
-    cursor: not-allowed;
-  }
-  &__prev:disabled &__icon {
-    fill: fn.color(text-muted);
   }
 
   &__icon {
