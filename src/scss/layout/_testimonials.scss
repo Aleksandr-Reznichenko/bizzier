@@ -1,4 +1,5 @@
 @use '../abstracts/placeholders';
+@use '../abstracts/variables' as var;
 @use '../abstracts/functions' as fn;
 @use '../abstracts/mixins' as mx;
 @use '../abstracts/media' as m;
@@ -10,47 +11,62 @@
   &__inner {
     @include m.mq(desktop) {
       display: grid;
-      grid-template-columns: minmax(auto, fn.rem(558)) fn.rem(654);
+      grid-template-columns: fn.rem(558) fn.rem(654);
       column-gap: fn.rem(40);
       justify-content: space-between;
 
       grid-template-areas:
-        'badge badge'
-        'heading comment'
-        'controls person';
+        'badge .'
+        'intro swiper'
+        'controls swiper';
     }
   }
 
-  &__intro,
-  &__list,
-  &__item {
+  &__intro {
     @include m.mq(desktop) {
-      display: contents;
-    }
-  }
-
-  &__badge {
-    @include m.mq(desktop) {
-      grid-area: badge;
-      margin-bottom: fn.rem(16);
-    }
-  }
-
-  &__heading {
-    @include m.mq(desktop) {
-      grid-area: heading;
-
+      grid-area: intro;
       align-items: start;
       text-align: left;
     }
   }
 
+  &__title,
+  &__badge {
+    margin-bottom: fluid(12, 16);
+  }
+
+  &__badge {
+    @include m.mq(desktop, max) {
+      display: block;
+      margin-inline: auto;
+    }
+
+    @include m.mq(desktop) {
+      grid-area: badge;
+    }
+  }
+
   // Content
+
+  &__swiper {
+    min-width: 0;
+    max-width: fn.rem(654);
+
+    @include m.mq(desktop) {
+      grid-area: swiper;
+    }
+  }
 
   // comment
   &__list {
     margin-inline: auto;
     max-width: fn.rem(654);
+  }
+
+  &__item {
+    @include m.mq(desktop, max) {
+      margin-bottom: fn.rem(32);
+    }
   }
 
   &__comment {
@@ -65,10 +81,6 @@
     @include m.mq(laptop) {
       line-height: fn.lh(base);
     }
-
-    @include m.mq(desktop) {
-      grid-area: comment;
-    }
   }
 
   //  person
@@ -76,20 +88,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include m.mq(laptop, max) {
-      margin-bottom: fn.rem(32);
-    }
   }
 
   &__person {
     display: flex;
     align-items: center;
     column-gap: fn.rem(16);
-
-    @include m.mq(desktop) {
-      grid-area: person;
-    }
   }
 
   &__avatar {
@@ -144,6 +148,7 @@
     @include m.mq(desktop) {
       grid-area: controls;
       justify-content: start;
+      align-self: end;
     }
   }
 
@@ -153,6 +158,18 @@
     @include mx.circle(fluid(30, 40));
 
     border: 1px solid fn.color(border);
+    transition:
+      border-color var.$duration var.$timing-fn,
+      background-color var.$duration var.$timing-fn;
+
+    @include m.hover {
+      border-color: transparent;
+      background-color: fn.color(accent-secondary);
+
+      &:not(.testimonials__next--accent) .testimonials__arrow-icon {
+        fill: fn.color(text-light);
+      }
+    }
   }
 
   &__prev {
@@ -160,12 +177,13 @@
   }
 
   &__next--accent {
-    border: none;
+    border-color: transparent;
     background-color: fn.color(accent-primary);
   }
 
   &__arrow-icon {
     fill: fn.color(text-primary);
+    transition: fill var.$duration var.$timing-fn;
   }
 
   &__next--accent &__arrow-icon {
