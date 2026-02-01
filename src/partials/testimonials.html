@@ -1,10 +1,14 @@
 <section class="testimonials">
   <div class="testimonials__inner container">
+    <!-- Badge -->
+    <span class="testimonials__badge badge">Testimonials</span>
+
     <!-- Intro -->
     <div class="testimonials__intro intro">
-      <span class="testimonials__badge badge">Testimonials</span>
-      <div class="testimonials__heading intro">
-        <h2 class="intro__title">Proven Results, Real Clients</h2>
+      <div class="testimonials__heading">
+        <h2 class="testimonials__title intro__title">
+          Proven Results, Real Clients
+        </h2>
         <p class="intro__description">
           Discover how businesses across industries have scaled smarter and
           faster with our tailored B2B marketing strategies.
@@ -12,62 +16,193 @@
       </div>
     </div>
 
-    <!-- Content / testimonials list -->
-    <ul class="testimonials__list">
-      <li class="testimonials__item">
-        <!-- comment -->
-        <p class="testimonials__comment">
-          Bizzier transformed our lead generation. The ROI speaks for itself.
-          Their team guided us through every stage with clarity and precision.
-          We now attract the right clients faster than ever before.
-        </p>
+    <!-- Slider -->
+    <div class="testimonials__swiper swiper">
+      <!-- list testimonials -->
+      <ul class="testimonials__list swiper-wrapper">
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Bizzier transformed our lead generation. The ROI speaks for itself.
+            Their team guided us through every stage with clarity and precision.
+            We now attract the right clients faster than ever before.
+          </p>
 
-        <!-- person -->
-        <div class="testimonials__footer">
-          <div class="testimonials__person">
-            <img
-              class="testimonials__avatar"
-              src="./src/images/testimonials/no-avatar.svg"
-              alt="Photo of Julia Martinez"
-              width="52"
-              height="52"
-              loading="lazy" />
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="./src/images/testimonials/no-avatar.svg"
+                alt="Photo of Julia Martinez"
+                width="52"
+                height="52"
+                loading="lazy" />
 
-            <div class="testimonials__meta">
-              <span class="testimonials__author">Julia Martinez</span>
-              <span class="testimonials__role">SaaS Founder</span>
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Julia Martinez</span>
+                <span class="testimonials__role">SaaS Founder</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
             </div>
           </div>
+        </li>
 
-          <div class="testimonials__counter">
-            <span class="testimonials__counter-current">01</span
-            ><span class="testimonials__counter-total">05</span>
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Working with Bizzier changed how we approach lead generation. Every
+            decision was backed by data and clear business logic. The team
+            stayed involved at every stage of execution.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="./src/images/testimonials/no-avatar.svg"
+                alt="Photo of Michael Thompson"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Michael Thompson</span>
+                <span class="testimonials__role">Growth Marketing Lead</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
           </div>
-        </div>
+        </li>
 
-        <!-- controls -->
-        <div class="testimonials__controls">
-          <!-- previous button -->
-          <button
-            class="testimonials__prev"
-            type="button"
-            aria-label="Previous testimonial">
-            <svg class="testimonials__arrow-icon" width="12" height="10">
-              <use href="./src/images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </button>
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Our marketing finally became predictable after working with Bizzier.
+            They aligned strategy, content, and lead acquisition seamlessly. The
+            process was smooth and easy to follow.
+          </p>
 
-          <!-- next button -->
-          <button
-            class="testimonials__next testimonials__next--accent"
-            type="button"
-            aria-label="Next testimonial">
-            <svg class="testimonials__arrow-icon" width="12" height="10">
-              <use href="./src/images/sprite.svg#icon-arrow"></use>
-            </svg>
-          </button>
-        </div>
-      </li>
-    </ul>
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="./src/images/testimonials/no-avatar.svg"
+                alt="Photo of Sophia Reynolds"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Sophia Reynolds</span>
+                <span class="testimonials__role">Head of Marketing</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Working with Bizzier changed how we approach lead generation. Every
+            decision was backed by data and clear business logic. The team
+            stayed involved at every stage of execution.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="./src/images/testimonials/no-avatar.svg"
+                alt="Photo of Emma Wilson"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Emma Wilson</span>
+                <span class="testimonials__role">SaaS Founder</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Bizzier delivered a clear strategy tailored to our business goals.
+            They refined our messaging and improved conversion efficiency. The
+            collaboration felt structured, calm, and reliable.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="./src/images/testimonials/no-avatar.svg"
+                alt="Photo of Daniel Cooper"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Daniel Cooper</span>
+                <span class="testimonials__role">CEO, Tech Startup</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Сontrols -->
+    <div class="testimonials__controls">
+      <!-- previous button -->
+      <button
+        class="testimonials__prev"
+        type="button"
+        aria-label="Previous testimonial">
+        <svg class="testimonials__arrow-icon" width="12" height="10">
+          <use href="./src/images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+
+      <!-- next button -->
+      <button
+        class="testimonials__next testimonials__next--accent"
+        type="button"
+        aria-label="Next testimonial">
+        <svg class="testimonials__arrow-icon" width="12" height="10">
+          <use href="./src/images/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </section>
