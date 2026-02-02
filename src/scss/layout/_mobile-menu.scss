@@ -102,3 +102,9 @@
     }
   }
 }
+
+@include m.mq(tablet) {
+  .backdrop {
+    display: none;
+  }
+}
