@@ -4,16 +4,16 @@ import { sync } from 'glob';
 
 export default defineConfig({
   build: {
-    emptyOutDir: false, // папка dist не блиматиме при кожному оновленні
-    minify: false, // вимикає стиснення в один рядок
+    emptyOutDir: false,
+    minify: false,
     rollupOptions: {
-      input: sync('./*.html'), // Знаходить усі HTML файли в корені проєкту для збірки
+      input: sync('./*.html'),
       output: {
-        assetFileNames: 'assets/[name][extname]', // прибирає хеш з імен CSS файлів
-        chunkFileNames: 'assets/[name].js', // прибирає хеш з імен JS файлів
-        entryFileNames: 'assets/[name].js', // прибирає хеш з головного JS файлу
+        assetFileNames: 'assets/[name][extname]',
+        chunkFileNames: 'assets/[name].js',
+        entryFileNames: 'assets/[name].js',
       },
     },
   },
-  plugins: [injectHTML()], // Підключаємо плагін для вставки частин HTML (partials)
+  plugins: [injectHTML()],
 });
