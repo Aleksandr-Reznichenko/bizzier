@@ -1,0 +1,1823 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/bizzier/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Modern, responsive landing page for a B2B marketing agency. Built with SCSS and Vite for high performance and clean structure." />
+
+    <link
+      rel="canonical"
+      href="https://aleksandr-reznichenko.github.io/bizzier" />
+
+    <title>Bizzier - Marketing Agency Landing Page</title>
+    <script type="module" crossorigin src="/bizzier/assets/index.js"></script>
+    <link rel="stylesheet" crossorigin href="/bizzier/assets/index.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="header__inner container">
+    <!-- Logotype -->
+    <a class="header__logo" href="./">
+      <svg class="header__logo-icon" aria-hidden="true" width="28" height="28">
+        <use href="/bizzier/assets/sprite.svg#icon-logo"></use>
+      </svg>
+      <span>Bizzier</span>
+    </a>
+
+    <!-- navigation -->
+    <nav class="header__nav" aria-label="Main navigation">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link is-active" href="./">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#about" class="header__nav-link">About</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#services" class="header__nav-link">Services</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="#pricing" class="header__nav-link">Pricing</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- cta-link -->
+    <a class="header__btn btn btn--accent" href="#cta">Try For Free</a>
+
+    <!-- Menu -->
+    <button
+      class="header__menu js-open-menu"
+      type="button"
+      aria-label="Open menu"
+      title="Open menu"
+      aria-expanded="false">
+      <svg class="header__menu-icon" aria-hidden="true" width="18" height="14">
+        <use href="/bizzier/assets/sprite.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </div>
+</header>
+
+
+    <main>
+      <section class="hero section">
+  <div class="hero__inner container">
+    <!-- Badge -->
+    <div class="hero__badge badge badge--hero">
+      <svg class="hero__badge-icon" aria-hidden="true" width="14" height="14">
+        <use href="/bizzier/assets/sprite.svg#icon-illustration"></use>
+      </svg>
+
+      <span>Powering the Next Generation of Business Partnerships</span>
+    </div>
+
+    <!-- Main info -->
+    <div class="hero__main">
+      <!-- title and description -->
+      <div class="hero__info">
+        <h1 class="hero__title">Connecting You to the Right Partners</h1>
+        <p class="hero__description">
+          Unlock sustainable growth through tailored strategies that strengthen
+          B2B relationships, enhance performance, and create lasting impact.
+        </p>
+      </div>
+
+      <!-- buttons -->
+      <div class="hero__buttons">
+        <a class="btn btn--accent" href="#cta">Get a Free Quote</a>
+        <a class="btn" href="#services">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="hero__illustration">
+      <img
+        class="hero__img"
+        src="/bizzier/assets/illustration.svg"
+        alt="Connecting partners illustration"
+        width="666"
+        height="666" />
+    </div>
+
+    <!-- Key Metrics -->
+    <ul class="hero__metrics">
+      <li class="hero__metric">
+        <span class="hero__metric-value">150%</span>
+        <p class="hero__metric-label">Average Roi Increase</p>
+      </li>
+      <li class="hero__metric">
+        <span class="hero__metric-value">100+</span>
+        <p class="hero__metric-label">Trusted Global Clients</p>
+      </li>
+      <li class="hero__metric">
+        <span class="hero__metric-value">250+</span>
+        <p class="hero__metric-label">Successful Campaigns</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="services section" id="services">
+  <div class="services__inner container">
+    <!-- Intro -->
+    <div class="services__intro intro">
+      <span class="badge">Services</span>
+      <h2 class="intro__title">What We Do Best</h2>
+      <p class="intro__description">
+        From lead generation to brand strategy, we cover every aspect of B2B
+        marketing.
+      </p>
+    </div>
+
+    <!-- Content / card list -->
+    <ul class="services__card-list">
+      <li class="services__card card">
+        <img
+          class="services__img"
+          src="/bizzier/assets/lead.svg"
+          alt="B2B lead generation illustration"
+          width="247"
+          height="240"
+          loading="lazy" />
+
+        <!-- details -->
+        <div class="services__details">
+          <div class="services__wrapper">
+            <h3 class="services__subtitle">B2B Lead Generation</h3>
+            <p>Target and convert high-value leads with pinpoint precision.</p>
+          </div>
+
+          <a class="services__link btn btn--text" href="#">See Details</a>
+        </div>
+      </li>
+
+      <li class="services__card card">
+        <img
+          class="services__img"
+          src="/bizzier/assets/content.svg"
+          alt="Content marketing strategy illustration"
+          width="247"
+          height="240"
+          loading="lazy" />
+
+        <!-- details -->
+        <div class="services__details">
+          <div class="services__wrapper">
+            <h3 class="services__subtitle">Content Market</h3>
+            <p>Build authority through engaging, industry-relevant content.</p>
+          </div>
+
+          <a class="services__link btn btn--text" href="#">See Details</a>
+        </div>
+      </li>
+
+      <li class="services__card card">
+        <img
+          class="services__img"
+          src="/bizzier/assets/linkedin.svg"
+          alt="LinkedIn marketing illustration"
+          width="247"
+          height="240"
+          loading="lazy" />
+
+        <!-- details -->
+        <div class="services__details">
+          <div class="services__wrapper">
+            <h3 class="services__subtitle">LinkedIn Marketing</h3>
+            <p>
+              Maximize B2B outreach through the leading professional platform
+            </p>
+          </div>
+
+          <a class="services__link btn btn--text" href="#">See Details</a>
+        </div>
+      </li>
+
+      <li class="services__card card">
+        <img
+          class="services__img"
+          src="/bizzier/assets/email.svg"
+          alt="Email marketing campaigns illustration"
+          width="247"
+          height="240"
+          loading="lazy" />
+
+        <!-- details -->
+        <div class="services__details">
+          <div class="services__wrapper">
+            <h3 class="services__subtitle">Email Campaigns</h3>
+            <p>
+              Nurture relationships with strategic, automated email marketing
+              flows.
+            </p>
+          </div>
+
+          <a class="services__link btn btn--text" href="#">See Details</a>
+        </div>
+      </li>
+
+      <li class="services__card card">
+        <img
+          class="services__img"
+          src="/bizzier/assets/seo.svg"
+          alt="B2B SEO and SEM illustration"
+          width="247"
+          height="240"
+          loading="lazy" />
+
+        <!-- details -->
+        <div class="services__details">
+          <div class="services__wrapper">
+            <h3 class="services__subtitle">SEO & SEM for B2B</h3>
+            <p>Improve visibility and reach decision-makers effectively.</p>
+          </div>
+
+          <a class="services__link btn btn--text" href="#">See Details</a>
+        </div>
+      </li>
+
+      <li class="services__card card">
+        <img
+          class="services__img"
+          src="/bizzier/assets/brand.svg"
+          alt="Brand strategy planning illustration"
+          width="247"
+          height="240"
+          loading="lazy" />
+
+        <!-- details -->
+        <div class="services__details">
+          <div class="services__wrapper">
+            <h3 class="services__subtitle">Brand Strategy</h3>
+            <p>Define, refine, and elevate your B2B brand identity.</p>
+          </div>
+
+          <a class="services__link btn btn--text" href="#">See Details</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="about" id="about">
+  <div class="about__inner container">
+    <!-- Intro -->
+    <div class="about__intro intro">
+      <span class="badge">About</span>
+      <h2 class="about__title intro__title">
+        Your Trusted Partner in Achieving Lasting Marketing Success
+      </h2>
+    </div>
+
+    <!-- Content -->
+    <p class="about__description">
+      Bizzier specializes in helping B2B companies cut through the noise and
+      connect with their ideal customers. With years of experience in
+      data-driven strategies and account-focused marketing, we deliver solutions
+      that maximize ROI and scale your business growth
+    </p>
+  </div>
+</section>
+
+      <div class="clients">
+  <div class="clients__inner container">
+    <ul class="clients__list">
+      <li class="clients__item">
+        <a class="clients__link" href="#">
+          <img
+            class="clients__logo-01"
+            src="/bizzier/assets/logo-01.svg"
+            alt="Partner company logo"
+            width="131"
+            height="28" />
+        </a>
+      </li>
+
+      <li class="clients__item">
+        <a class="clients__link" href="#">
+          <img
+            class="clients__logo-02"
+            src="data:image/svg+xml,%3csvg%20width='86'%20height='20'%20viewBox='0%200%2086%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M55.2158%200C60.343%200%2064.4999%204.25361%2064.5%209.5V10.1309C64.4998%2011.689%2064.1251%2013.2235%2063.4092%2014.5986L60.5908%2020L57.9785%2018.5723C57.1059%2018.8502%2056.1779%2019%2055.2158%2019H41.5342C36.4069%2019%2032.25%2014.7465%2032.25%209.5C32.2501%204.25361%2036.407%200%2041.5342%200H55.2158ZM4.88672%2011.5C4.88672%2012.1628%205.14363%2012.7988%205.60156%2013.2676C6.05964%2013.7363%206.68129%2013.9999%207.3291%2014H12.7041V19H7.3291C3.28144%2018.9998%200%2015.6418%200%2011.5V0H4.88672V11.5ZM21.9883%200C27.1155%200%2031.2723%204.25361%2031.2725%209.5C31.2725%2014.7465%2027.1155%2019%2021.9883%2019C16.8612%2018.9998%2012.7041%2014.7464%2012.7041%209.5C12.7042%204.25373%2016.8613%200.000196658%2021.9883%200ZM74.7617%200C79.8887%200.000195467%2084.0458%204.25373%2084.0459%209.5C84.0459%2014.7464%2079.8888%2018.9998%2074.7617%2019C69.6345%2019%2065.4775%2014.7465%2065.4775%209.5C65.4777%204.25361%2069.6345%200%2074.7617%200ZM21.9883%205C21.4109%205.00005%2020.8391%205.11667%2020.3057%205.34277C19.7721%205.56892%2019.2873%205.9005%2018.8789%206.31836C18.4706%206.73621%2018.1468%207.23239%2017.9258%207.77832C17.7048%208.32418%2017.5909%208.90917%2017.5908%209.5C17.5908%2010.0909%2017.7048%2010.6767%2017.9258%2011.2227C18.1468%2011.7685%2018.4706%2012.2648%2018.8789%2012.6826C19.2872%2013.1004%2019.7723%2013.4311%2020.3057%2013.6572C20.8391%2013.8833%2021.4109%2014%2021.9883%2014C23.1546%2014%2024.2739%2013.5265%2025.0986%2012.6826C25.9234%2011.8387%2026.3867%2010.6935%2026.3867%209.5C26.3867%208.30672%2025.9232%207.16219%2025.0986%206.31836C24.2739%205.47445%2023.1546%205%2021.9883%205ZM41.5342%205C40.9568%205%2040.385%205.11672%2039.8516%205.34277C39.3181%205.56889%2038.8331%205.90056%2038.4248%206.31836C38.0164%206.73622%2037.6917%207.23236%2037.4707%207.77832C37.2498%208.32413%2037.1367%208.90923%2037.1367%209.5C37.1367%2010.0909%2037.2497%2010.6767%2037.4707%2011.2227C37.6917%2011.7686%2038.0165%2012.2648%2038.4248%2012.6826C38.8331%2013.1003%2039.3182%2013.4312%2039.8516%2013.6572C40.3851%2013.8833%2040.9567%2014%2041.5342%2014H55.2158C56.3763%2014%2057.4897%2013.5307%2058.3135%2012.6943C59.1372%2011.858%2059.6043%2010.7225%2059.6133%209.53516V9.5C59.6132%208.30661%2059.1499%207.16222%2058.3252%206.31836C57.5005%205.47453%2056.3821%205%2055.2158%205H41.5342ZM74.7617%205C73.5954%205%2072.4761%205.47445%2071.6514%206.31836C70.8268%207.16219%2070.3633%208.30672%2070.3633%209.5C70.3633%2010.6935%2070.8266%2011.8387%2071.6514%2012.6826C72.4761%2013.5265%2073.5954%2014%2074.7617%2014C75.9279%2013.9999%2077.0465%2013.5263%2077.8711%2012.6826C78.6958%2011.8387%2079.1592%2010.6935%2079.1592%209.5C79.1591%208.30665%2078.6957%207.16221%2077.8711%206.31836C77.0464%205.47453%2075.9279%205.0001%2074.7617%205ZM84.7783%200C85.1023%200%2085.4135%200.13179%2085.6426%200.366211C85.8716%200.600566%2085.9999%200.918604%2086%201.25C86%201.58137%2085.8715%201.8994%2085.6426%202.13379C85.4135%202.36821%2085.1023%202.5%2084.7783%202.5C84.4544%202.49996%2084.1441%202.36817%2083.915%202.13379C83.6859%201.89937%2083.5566%201.58152%2083.5566%201.25C83.5567%200.918567%2083.686%200.600574%2083.915%200.366211C84.1441%200.131987%2084.4545%204.20579e-05%2084.7783%200Z'%20fill='%23656565'/%3e%3c/svg%3e"
+            alt="Partner company logo"
+            width="86"
+            height="20" />
+        </a>
+      </li>
+
+      <li class="clients__item">
+        <a class="clients__link" href="#">
+          <img
+            class="clients__logo-03"
+            src="/bizzier/assets/logo-03.svg"
+            alt="Partner company logo"
+            width="178"
+            height="28" />
+        </a>
+      </li>
+
+      <li class="clients__item">
+        <a class="clients__link" href="#">
+          <img
+            class="clients__logo-04"
+            src="/bizzier/assets/logo-04.svg"
+            alt="Partner company logo"
+            width="146"
+            height="28" />
+        </a>
+      </li>
+
+      <li class="clients__item">
+        <a class="clients__link" href="#">
+          <img
+            class="clients__logo-05"
+            src="data:image/svg+xml,%3csvg%20width='118'%20height='28'%20viewBox='0%200%20118%2028'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M99.6816%205.39453C101.202%200.236961%20108.565%200.430077%20109.812%205.66016L115.059%2027.6553H107.87L104.533%2013.668L102.053%2022.082C100.573%2027.1009%2093.472%2027.1009%2091.9932%2022.082L89.5127%2013.668L86.1758%2027.6553H78.9863L84.2334%205.66016C85.4814%200.430131%2092.8443%200.237009%2094.3643%205.39453L97.0234%2014.4131L99.6816%205.39453ZM6.99316%2027.6543H0V1.40527H6.99316V27.6543ZM25.3486%201.40527C30.1758%201.40533%2034.0886%205.32206%2034.0889%2010.1543C34.0889%2014.9868%2030.176%2018.9042%2025.3486%2018.9043H17.4814V27.6543H10.4893V1.40527H25.3486ZM50.6963%208.4043H48.9482C46.0521%208.40449%2043.7044%2010.7552%2043.7041%2013.6543V14.5293C43.7041%2021.778%2037.8339%2027.6543%2030.5928%2027.6543H29.7188V20.6543H30.5928C33.972%2020.6543%2036.7119%2017.912%2036.7119%2014.5293V13.6543C36.7122%206.88914%2042.1902%201.40546%2048.9482%201.40527H50.6963V8.4043ZM60.3115%2014.9668C60.3115%2018.1079%2062.8553%2020.6543%2065.9932%2020.6543C69.131%2020.6543%2071.6748%2018.1079%2071.6748%2014.9668V1.40527H78.667V14.9668C78.667%2021.9739%2072.993%2027.6543%2065.9932%2027.6543C58.9935%2027.6543%2053.3193%2021.9739%2053.3193%2014.9668V1.40527H60.3115V14.9668ZM17.4814%2011.9043H25.3486C26.3141%2011.9042%2027.0967%2011.1208%2027.0967%2010.1543C27.0964%209.18807%2026.3139%208.40435%2025.3486%208.4043H17.4814V11.9043ZM115.257%200C116.705%200.000257754%20117.879%201.17552%20117.879%202.625C117.879%204.07459%20116.705%205.24974%20115.257%205.25C113.809%205.25%20112.635%204.07475%20112.635%202.625C112.635%201.17536%20113.809%200%20115.257%200Z'%20fill='%23656565'/%3e%3c/svg%3e"
+            alt="Partner company logo"
+            width="118"
+            height="20" />
+        </a>
+      </li>
+
+      <li class="clients__item">
+        <a class="clients__link" href="#">
+          <img
+            class="clients__logo-06"
+            src="/bizzier/assets/logo-06.svg"
+            alt="Partner company logo"
+            width="157"
+            height="28" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <section class="value">
+  <div class="value__inner container">
+    <!-- Intro -->
+    <div class="intro">
+      <span class="badge">Value</span>
+      <h2 class="intro__title">Why Choose Bizzier</h2>
+      <p class="intro__description">
+        We combine expertise, innovation, and measurable impact.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="value__content">
+      <img
+        class="value__img"
+        src="/bizzier/assets/why-choose-us.svg"
+        alt="Illustration of a team working on marketing data and digital solutions"
+        width="450"
+        height="338" />
+
+      <ol class="value__list">
+        <li class="value__item">
+          <div class="value__wrapper">
+            <h3 class="value__subtitle">B2B Specialist</h3>
+            <p class="value__text">
+              Deep knowledge of complex B2B buyer journeys.
+            </p>
+          </div>
+        </li>
+
+        <li class="value__item">
+          <div class="value__wrapper">
+            <h3 class="value__subtitle">Data-Driven</h3>
+            <p class="value__text">
+              Every decision backed by insights and analytics.
+            </p>
+          </div>
+        </li>
+
+        <li class="value__item">
+          <div class="value__wrapper">
+            <h3 class="value__subtitle">Tailored Solution</h3>
+            <p class="value__text">
+              Strategies customized to your industry needs.
+            </p>
+          </div>
+        </li>
+
+        <li class="value__item">
+          <div class="value__wrapper">
+            <h3 class="value__subtitle">Proven Results</h3>
+            <p class="value__text">
+              A track record of consistent growth and ROI.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+      <section class="studies container">
+  <div class="studies__inner section">
+    <!-- Intro -->
+    <div class="intro">
+      <span class="badge">Case Studies</span>
+      <h2 class="intro__title">Transformations We've Delivered</h2>
+      <p class="intro__description">
+        Discover how businesses thrived with our B2B marketing strategies.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="studies__content">
+      <!-- card list -->
+      <ul class="studies__card-list">
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/saas.svg"
+            alt="Team analyzing SaaS marketing funnel"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Scaling Leads for SaaS Growth</h3>
+              <p class="studies__text">
+                Partnered with a SaaS provider to refine their lead funnel and
+                optimize multi-channel campaigns. By improving targeting and
+                conversion flows, we helped attract high-quality leads and scale
+                their growth efficiently.
+              </p>
+            </div>
+
+            <!--  stats  -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">200%</span>
+                  <p class="studies__metric-label">Lead Conversion</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">3x</span>
+                  <p class="studies__metric-label">Pipeline Growth</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/fintech.svg"
+            alt="Discussion of fintech marketing data"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Fintech ABM That Closed Deals</h3>
+              <p class="studies__text">
+                Designed and launched account-based marketing campaigns for a
+                fintech startup to target and convert key accounts. Personalized
+                outreach and data insights led to higher engagement and faster
+                deal closures.
+              </p>
+            </div>
+
+            <!-- stats -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">5x</span>
+                  <p class="studies__metric-label">Engagement Rate</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">$1M</span>
+                  <p class="studies__metric-label">In Closed Deals</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/logistics.svg"
+            alt="SEO strategy session for logistics"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Driving Visibility in Logistics</h3>
+              <p class="studies__text">
+                Worked with a logistics company to strengthen its online
+                presence through focused SEO and paid strategies. The campaign
+                increased visibility, improved search rankings, and delivered
+                stronger, lower-cost leads.
+              </p>
+            </div>
+
+            <!-- stats -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">120%</span>
+                  <p class="studies__metric-label">Traffic Growth</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">3x</span>
+                  <p class="studies__metric-label">Lower Acquisition Cost</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/saas.svg"
+            alt="Team analyzing SaaS marketing funnel"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Scaling Leads for SaaS Growth</h3>
+              <p class="studies__text">
+                Partnered with a SaaS provider to refine their lead funnel and
+                optimize multi-channel campaigns. By improving targeting and
+                conversion flows, we helped attract high-quality leads and scale
+                their growth efficiently.
+              </p>
+            </div>
+
+            <!--  stats  -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">200%</span>
+                  <p class="studies__metric-label">Lead Conversion</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">3x</span>
+                  <p class="studies__metric-label">Pipeline Growth</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/fintech.svg"
+            alt="Discussion of fintech marketing data"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Fintech ABM That Closed Deals</h3>
+              <p class="studies__text">
+                Designed and launched account-based marketing campaigns for a
+                fintech startup to target and convert key accounts. Personalized
+                outreach and data insights led to higher engagement and faster
+                deal closures.
+              </p>
+            </div>
+
+            <!-- stats -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">5x</span>
+                  <p class="studies__metric-label">Engagement Rate</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">$1M</span>
+                  <p class="studies__metric-label">In Closed Deals</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/logistics.svg"
+            alt="SEO strategy session for logistics"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Driving Visibility in Logistics</h3>
+              <p class="studies__text">
+                Worked with a logistics company to strengthen its online
+                presence through focused SEO and paid strategies. The campaign
+                increased visibility, improved search rankings, and delivered
+                stronger, lower-cost leads.
+              </p>
+            </div>
+
+            <!-- stats -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">120%</span>
+                  <p class="studies__metric-label">Traffic Growth</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">3x</span>
+                  <p class="studies__metric-label">Lower Acquisition Cost</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="studies__card card">
+          <img
+            class="studies__img"
+            src="/bizzier/assets/fintech.svg"
+            alt="Discussion of fintech marketing data"
+            width="247"
+            height="247"
+            loading="lazy" />
+
+          <div class="studies__wrapper">
+            <!-- details -->
+            <div class="studies__details">
+              <h3 class="studies__subtitle">Fintech ABM That Closed Deals</h3>
+              <p class="studies__text">
+                Designed and launched account-based marketing campaigns for a
+                fintech startup to target and convert key accounts. Personalized
+                outreach and data insights led to higher engagement and faster
+                deal closures.
+              </p>
+            </div>
+
+            <!-- stats -->
+            <div class="studies__stats">
+              <!-- key metrics -->
+              <ul class="studies__metrics">
+                <li class="studies__metric">
+                  <span class="studies__metric-value">5x</span>
+                  <p class="studies__metric-label">Engagement Rate</p>
+                </li>
+                <li class="studies__metric">
+                  <span class="studies__metric-value">$1M</span>
+                  <p class="studies__metric-label">In Closed Deals</p>
+                </li>
+              </ul>
+
+              <!-- link -->
+              <a class="studies__link btn" href="#">See Details</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- pagination -->
+      <nav class="pagination" aria-label="Results pagination">
+        <button
+          class="pagination__prev"
+          type="button"
+          aria-label="Previous page"
+          disabled>
+          <svg
+            class="pagination__icon"
+            aria-hidden="true"
+            width="14"
+            height="11">
+            <use href="/bizzier/assets/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
+
+        <ul class="pagination__list"></ul>
+
+        <button class="pagination__next" type="button" aria-label="Next page">
+          <svg
+            class="pagination__icon"
+            aria-hidden="true"
+            width="14"
+            height="11">
+            <use href="/bizzier/assets/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </div>
+</section>
+
+      <section class="process">
+  <div class="process__inner container">
+    <!-- Intro -->
+    <div class="intro">
+      <span class="badge">Process</span>
+      <h2 class="intro__title">The Method Behind the Results</h2>
+      <p class="intro__description">
+        A clear, structured approach from discovery to measurable results.
+      </p>
+    </div>
+
+    <!-- Content / card list -->
+    <ul class="process__list">
+      <li class="process__item">
+        <!-- image -->
+        <div class="process__wrap-img">
+          <img
+            class="process__img"
+            src="/bizzier/assets/discovery.svg"
+            alt="Calendar and calculator icon representing market research and discovery phase"
+            width="200"
+            height="160"
+            loading="lazy" />
+        </div>
+
+        <!-- details -->
+        <div class="process__details">
+          <h3 class="process__subtitle">Discovery & Research</h3>
+          <p class="process__text">
+            Understand your goals, industry, and competitors.
+          </p>
+        </div>
+      </li>
+
+      <li class="process__item">
+        <!-- image -->
+        <div class="process__wrap-img">
+          <img
+            class="process__img"
+            src="/bizzier/assets/strategy.svg"
+            alt="Human profile icon with bar charts representing data-backed strategy planning"
+            width="200"
+            height="160"
+            loading="lazy" />
+        </div>
+
+        <!-- details -->
+        <div class="process__details">
+          <h3 class="process__subtitle">Strategy Development</h3>
+          <p class="process__text">
+            Build a custom, data-backed B2B marketing plan.
+          </p>
+        </div>
+      </li>
+
+      <li class="process__item">
+        <!-- image -->
+        <div class="process__wrap-img">
+          <img
+            class="process__img"
+            src="/bizzier/assets/execution.svg"
+            alt="Two specialists analyzing a data chart on a presentation board"
+            width="200"
+            height="160"
+            loading="lazy" />
+        </div>
+
+        <!-- details -->
+        <div class="process__details">
+          <h3 class="process__subtitle">Execution & Optimization</h3>
+          <p class="process__text">Launch, monitor, and refine campaigns.</p>
+        </div>
+      </li>
+
+      <li class="process__item">
+        <!-- image -->
+        <div class="process__wrap-img">
+          <img
+            class="process__img"
+            src="/bizzier/assets/reporting.svg"
+            alt="Two people having a business meeting to discuss reports and scaling results"
+            width="200"
+            height="160"
+            loading="lazy" />
+        </div>
+
+        <!-- details -->
+        <div class="process__details">
+          <h3 class="process__subtitle">Report & Scaling</h3>
+          <p class="process__text">
+            Deliver insights and scale proven strategies.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="pricing section" id="pricing">
+  <div class="pricing__inner container">
+    <!-- Intro -->
+    <div class="intro">
+      <span class="badge">Pricing</span>
+      <h2 class="intro__title">Invest in Your B2B Growth</h2>
+      <p class="intro__description">
+        Choose a plan that fits your growth stage and aligns with your business
+        goals for long-term success.
+      </p>
+    </div>
+
+    <!-- Content / card list -->
+    <ul class="pricing__list">
+      <li class="pricing__card card">
+        <!-- info -->
+        <div class="pricing__info">
+          <!-- icon -->
+          <div class="pricing__box">
+            <div class="pricing__wrapper-icon">
+              <svg
+                class="pricing__icon"
+                width="16"
+                height="16"
+                aria-hidden="true">
+                <use href="/bizzier/assets/sprite.svg#icon-plant"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- subtitle % text -->
+          <h3 class="pricing__subtitle">Starter Package</h3>
+          <p class="pricing__text">
+            Best for small B2B businesses starting out.
+          </p>
+
+          <!-- price -->
+          <div class="pricing__price">
+            <span class="pricing__price-amount">$1500</span>
+            <span class="pricing__price-period">/month</span>
+          </div>
+        </div>
+
+        <!-- list of benefits -->
+        <ul class="pricing__benefits">
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Lead generation campaigns</span>
+          </li>
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Basic SEO optimization</span>
+          </li>
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Monthly performance report</span>
+          </li>
+        </ul>
+
+        <!-- button -->
+        <button class="pricing__btn btn btn--accent" type="button">
+          Choose Plan
+        </button>
+      </li>
+
+      <li class="pricing__card pricing__card--accent card">
+        <!-- info -->
+        <div class="pricing__info">
+          <!-- icon & tag -->
+          <div class="pricing__box">
+            <div class="pricing__wrapper-icon">
+              <svg
+                class="pricing__icon"
+                width="16"
+                height="16"
+                aria-hidden="true">
+                <use href="/bizzier/assets/sprite.svg#icon-lightbulb"></use>
+              </svg>
+            </div>
+
+            <span class="pricing__tag">Most Popular</span>
+          </div>
+
+          <!-- subtitle % text -->
+          <h3 class="pricing__subtitle">Growth Package</h3>
+          <p class="pricing__text">
+            Perfect for scaling B2B companies seeking wider reach.
+          </p>
+
+          <!-- price -->
+          <div class="pricing__price">
+            <span class="pricing__price-amount">$3000</span>
+            <span class="pricing__price-period">/month</span>
+          </div>
+        </div>
+
+        <!-- list of benefits -->
+        <ul class="pricing__benefits">
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Advanced SEO & SEM</span>
+          </li>
+
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Content marketing strategy</span>
+          </li>
+
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>LinkedIn outreach campaigns</span>
+          </li>
+
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Bi-weekly performance analysis</span>
+          </li>
+        </ul>
+
+        <!-- button -->
+        <button class="pricing__btn btn btn--accent" type="button">
+          Choose Plan
+        </button>
+      </li>
+
+      <li class="pricing__card card">
+        <!-- info -->
+        <div class="pricing__info">
+          <!-- icon -->
+          <div class="pricing__box">
+            <div class="pricing__wrapper-icon">
+              <svg
+                class="pricing__icon"
+                width="16"
+                height="16"
+                aria-hidden="true">
+                <use href="/bizzier/assets/sprite.svg#icon-globe"></use>
+              </svg>
+            </div>
+          </div>
+
+          <!-- subtitle % text -->
+          <h3 class="pricing__subtitle">Enterprise Package</h3>
+          <p class="pricing__text">Advanced B2B marketing for enterprises.</p>
+
+          <!-- price -->
+          <div class="pricing__price">
+            <span class="pricing__price-amount">$5000</span>
+            <span class="pricing__price-period">/month</span>
+          </div>
+        </div>
+
+        <!-- list of benefits -->
+        <ul class="pricing__benefits">
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Full ABM strategy</span>
+          </li>
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Brand strategy & positioning</span>
+          </li>
+          <li class="pricing__benefit">
+            <svg
+              class="pricing__benefit-icon"
+              width="18"
+              height="18"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-check-circle"></use>
+            </svg>
+            <span>Dedicated campaign manager</span>
+          </li>
+        </ul>
+
+        <!-- button -->
+        <button class="pricing__btn btn btn--accent" type="button">
+          Choose Plan
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="testimonials">
+  <div class="testimonials__inner container">
+    <!-- Badge -->
+    <span class="testimonials__badge badge">Testimonials</span>
+
+    <!-- Intro -->
+    <div class="testimonials__intro intro">
+      <div class="testimonials__heading">
+        <h2 class="testimonials__title intro__title">
+          Proven Results, Real Clients
+        </h2>
+        <p class="intro__description">
+          Discover how businesses across industries have scaled smarter and
+          faster with our tailored B2B marketing strategies.
+        </p>
+      </div>
+    </div>
+
+    <!-- Slider -->
+    <div class="testimonials__swiper swiper">
+      <!-- list testimonials -->
+      <ul class="testimonials__list swiper-wrapper">
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Bizzier transformed our lead generation. The ROI speaks for itself.
+            Their team guided us through every stage with clarity and precision.
+            We now attract the right clients faster than ever before.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="data:image/svg+xml,%3csvg%20width='52'%20height='52'%20viewBox='0%200%2052%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ccircle%20cx='26'%20cy='26'%20r='26'%20fill='url(%23pattern0_112_8511)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_112_8511'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_112_8511'%20transform='scale(0.00390625)'/%3e%3c/pattern%3e%3cimage%20id='image0_112_8511'%20width='256'%20height='256'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAACixJREFUeF7t3TFSJEAMQ9HhBNz/jESkJLuH+EGXym9zirKxvmUx9H79/f39+4R/v7+/4as/n+/v7/T1vr/+lwG6Pn9fAABARUAAvA1gAOBAiv4/AAAAaYCuWzD1c2BFQBXAHAAHUOaPAxjPwAAAAAAgdKBu4NcOEAAAIIz/hwPgALZDkNcE9v1lAIXA1YFwABxAmT8OgAPgAIqCOAAOoMwPBzBOYAAAAAAIHagEJEACDOM3fwLJAGQAZf7nBXB9AQAAAABA6MC6AwUAAAjj73MAACCESwK6bkHV/zaD+fr5+UnvAfgBvv0B6r/+lw0EABxMmR8PuoyfkAAAAAAQOrDuwAAAAML4e9INAMYt0HqKuz6A+v/2o/QcAAfAAYQOrAMYAAAgjL8TAACcAElALPBbC3y9/xwAB5AAtr4BAcAHgQggdAAAtj+IxAFwAEH+MoB1AAIAAABA6AAACAHD+Phruus3+Ov6OQAOIAFsfQO+FuDr7w8AAAAAoQPrAAQAAAjjLwScB4D/Hnz71zivLaTvv/1BJk+CCTGTAwAAAEgDtG6hCGBbANfnjwPgABLAAXAbgAAAAAAQOrAOQAAAgDD+PsgEAH6NlgR0/QZV/9vfQnEAHEAC2PoGvA4gAAAAAAgdWAcgAABAGH8ZAADIAJKArltQ9csAkoDWCUwAbwVwvf9OACcAAIcOrC8gAACAMP4yAACQASQBXbeg6n97AnEAHEAC2PoGvA4gD4JwMAkA1wW0Xj8AAAAAhA4AAAsdxkeI5oR4++fEHAAHkAC2vgGvAwgAAAAAQgfWAQgAABDG36vAACADSAK6bkHVLwNIAlonMAG8FcD1/jsBnAAAHDqwvoAAAADC+MsAAEAGkAR03YKq/+0JxAFwAAlg6xvwOoAAAAAAIHRgHYAAAABh/GUAACADSAK6bkHVLwNIAlonMAG8FcD1/nsQhINJAL4uoPX6AQAAACB0AACEaGF8hGhOOG8CJgGtE5gA3grgev+dAE4AAA4dWF9AAAAAYfw9aQYAMoAkoOsWVP1vTyAOgANIAFvfgNcBBAAAAAChA+sABAAACOMvAwAAGUAS0HULqn4ZQBLQOoEJ4K0ArvffCeAEAODQgfUFBAAAEMZfBgAAMoAkoOsWVP1vTyAOgANIAFvfgNcB5EkwDiYB4LqA1usHAAAAgNABAGChw/gI0ZwQb59E4wA4gASw9Q14HUAAAAAAEDqwDkAAAIAw/p40AwAZQBLQdQuqfhlAEtA6gQngrQCu998J4AQA4NCB9QUEAAAQxl8GAAAygCSg6xZU/W9PIA6AA0gAW9+A1wEEAAAAAKED6wAEAAAI4y8DAAAZQBLQdQuqfhlAEtA6gQngrQCu99+DIBxMAvB1Aa3XDwAAAAChAwAgRAvjI0RzwnkTMAloncAE8FYA1/vvBHACAHDowPoCAgAACOPvSTMAkAEkAV23oOp/ewJxABxAAtj6BrwOIAAAAAAIHVgHIAAAQBh/GQAAyACSgK5bUPXLAJKA1glMAG8FcL3/TgAnAACHDqwvIAAAgDD+MgAAkAEkAV23oOp/ewJxABxAAtj6BrwOIE+CcTAJANcFtF4/AAAAAIQOAAALHcZHiOaEePskGgfAASSArW/A6wACAAAAgNCBdQACAACE8fekGQDIAJKArltQ9csAkoDWCUwAbwVwvf9OACcAAIcOrC8gAACAMP4yAACQASQBXbeg6n97AnEAHEAC2PoGvA4gAAAAAAgdWAcgAABAGH8ZAADIAJKArltQ9csAkoDWCUwAbwVwvf8eBOFgEoCvC2i9fgAAAAAIHQAAIVoYHyGaE86bgElA6wQmgLcCuN5/J4ATAIBDB9YXEAAAQBh/T5oBgAwgCei6BVX/2xOIA+AAEsDWN+B1AAEAAABA6MA6AAEAAML4ywAAQAaQBHTdgqpfBpAEtE5gAngrgOv9dwI4AQA4dGB9AQEAAITxlwEAgAwgCei6BVX/2xOIA+AAEsDWN+B1AHkSjINJALguoPX6AQAAACB0AABY6DA+QjQnxNsn0TgADiABbH0DXgcQAAAAAIQOrAMQAAAgjL8nzQBABpAEdN2Cql8GkAS0TmACeCuA6/13AjgBADh0YH0BAQAAhPGXAQCADCAJ6LoFVf/bE4gD4AASwNY34HUAAQAAAEDowDoAAQAAwvjLAABABpAEdN2Cql8GkAS0TmACeCuA6/33IAgHkwB8XUDr9QMAAABA6AAACNHC+AjRnHDeBEwCWicwAbwVwPX+OwGcAAAcOrC+gAAAAML4e9IMAGQASUDXLaj6355AHAAHkAC2vgGvAwgAAAAAQgfWAQgAABDGXwYAADKAJKDrFlT9MoAkoHUCE8BbAVzvvxPACQDAoQPrCwgAACCMvwwAAGQASUDXLaj6355AHAAHkAC2vgGvA8iTYBxMAsB1Aa3XDwAAAAChAwDAQofxEaI5Id4+icYBcAAJYOsb8DqAAAAAACB0YB2AAAAAYfw9aQYAMoAkoOsWVP0ygCSgdQITwFsBXO+/E8AJAMChA+sLCAAAIIy/DAAAZABJQNctqPrfnkAcAAeQALa+Aa8DCAAAAABCB9YBCAAAEMZfBgAAMoAkoOsWVP0ygCSgdQITwFsBXO+/B0E4mATg6wJarx8AAAAAQgcAQIgWxkeI5oTzJmAS0DqBCeCtAK733wngBADg0IH1BQQAABDG35NmACADSAK6bkHV//YE4gA4gASw9Q14HUAAAAAAEDqwDkAAAIAw/jIAAJABJAFdt6DqlwEkAa0TmADeCuB6/50ATgAADh1YX0AAAABh/GUAACADSAK6bkHV//YE4gA4gASw9Q14HUCeBONgEgCuC2i9fgAAAAAIHQAAFjqMjxDNCfH2STQOgANIAFvfgNcBBAAAAAChA+sABAAACOPvSTMAkAEkAV23oOqXASQBrROYAN4K4Hr/nQBOAAAOHVhfQAAAAGH8ZQAAIANIArpuQdX/9gTiADiABLD1DXgdQAAAAAAQOrAOQAAAgDD+MgAAkAEkAV23oOqXASQBrROYAN4K4Hr/PQjCwSQAXxfQev0AAAAAEDoAAEK0MD5CNCecNwGTgNYJTABvBXC9/04AJwAAhw6sLyAAAIAw/p40AwAZQBLQdQuq/rcnEAfAASSArW/A6wACAAAAgNCBdQACAACE8ZcBAIAMIAnougVVvwwgCWidwATwVgDX++8EcAIAcOjA+gICAAAI4y8DAAAZQBLQdQuq/rcnEAfAASSArW/A6wDyJBgHkwBwXUDr9QMAAABA6AAAsNBhfIRoToi3T6JxABxAAtj6BrwOIAAAAAAIHVgHIAAAQBh/T5oBgAwgCei6BVW/DCAJaJ3ABPBWANf77wRwAgBw6MD6AgIAAAjjLwMAABlAEtB1C6r+tycQB8ABJICtb8DrAAIAAACA0IF1AAIAAITxlwEAgAwgCei6BVW/DCAJaJ3ABPBWANf7/x/aVlkHhH7qqQAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3c/svg%3e"
+                alt="Photo of Julia Martinez"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Julia Martinez</span>
+                <span class="testimonials__role">SaaS Founder</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Working with Bizzier changed how we approach lead generation. Every
+            decision was backed by data and clear business logic. The team
+            stayed involved at every stage of execution.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="data:image/svg+xml,%3csvg%20width='52'%20height='52'%20viewBox='0%200%2052%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ccircle%20cx='26'%20cy='26'%20r='26'%20fill='url(%23pattern0_112_8511)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_112_8511'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_112_8511'%20transform='scale(0.00390625)'/%3e%3c/pattern%3e%3cimage%20id='image0_112_8511'%20width='256'%20height='256'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,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'/%3e%3c/defs%3e%3c/svg%3e"
+                alt="Photo of Michael Thompson"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Michael Thompson</span>
+                <span class="testimonials__role">Growth Marketing Lead</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Our marketing finally became predictable after working with Bizzier.
+            They aligned strategy, content, and lead acquisition seamlessly. The
+            process was smooth and easy to follow.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="data:image/svg+xml,%3csvg%20width='52'%20height='52'%20viewBox='0%200%2052%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ccircle%20cx='26'%20cy='26'%20r='26'%20fill='url(%23pattern0_112_8511)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_112_8511'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_112_8511'%20transform='scale(0.00390625)'/%3e%3c/pattern%3e%3cimage%20id='image0_112_8511'%20width='256'%20height='256'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,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'/%3e%3c/defs%3e%3c/svg%3e"
+                alt="Photo of Sophia Reynolds"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Sophia Reynolds</span>
+                <span class="testimonials__role">Head of Marketing</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Working with Bizzier changed how we approach lead generation. Every
+            decision was backed by data and clear business logic. The team
+            stayed involved at every stage of execution.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="data:image/svg+xml,%3csvg%20width='52'%20height='52'%20viewBox='0%200%2052%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ccircle%20cx='26'%20cy='26'%20r='26'%20fill='url(%23pattern0_112_8511)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_112_8511'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_112_8511'%20transform='scale(0.00390625)'/%3e%3c/pattern%3e%3cimage%20id='image0_112_8511'%20width='256'%20height='256'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAAAXNSR0IArs4c6QAACixJREFUeF7t3TFSJEAMQ9HhBNz/jESkJLuH+EGXym9zirKxvmUx9H79/f39+4R/v7+/4as/n+/v7/T1vr/+lwG6Pn9fAABARUAAvA1gAOBAiv4/AAAAaYCuWzD1c2BFQBXAHAAHUOaPAxjPwAAAAAAgdKBu4NcOEAAAIIz/hwPgALZDkNcE9v1lAIXA1YFwABxAmT8OgAPgAIqCOAAOoMwPBzBOYAAAAAAIHagEJEACDOM3fwLJAGQAZf7nBXB9AQAAAABA6MC6AwUAAAjj73MAACCESwK6bkHV/zaD+fr5+UnvAfgBvv0B6r/+lw0EABxMmR8PuoyfkAAAAAAQOrDuwAAAAML4e9INAMYt0HqKuz6A+v/2o/QcAAfAAYQOrAMYAAAgjL8TAACcAElALPBbC3y9/xwAB5AAtr4BAcAHgQggdAAAtj+IxAFwAEH+MoB1AAIAAABA6AAACAHD+Phruus3+Ov6OQAOIAFsfQO+FuDr7w8AAAAAoQPrAAQAAAjjLwScB4D/Hnz71zivLaTvv/1BJk+CCTGTAwAAAEgDtG6hCGBbANfnjwPgABLAAXAbgAAAAAAQOrAOQAAAgDD+PsgEAH6NlgR0/QZV/9vfQnEAHEAC2PoGvA4gAAAAAAgdWAcgAABAGH8ZAADIAJKArltQ9csAkoDWCUwAbwVwvf9OACcAAIcOrC8gAACAMP4yAACQASQBXbeg6n97AnEAHEAC2PoGvA4gD4JwMAkA1wW0Xj8AAAAAhA4AAAsdxkeI5oR4++fEHAAHkAC2vgGvAwgAAAAAQgfWAQgAABDG36vAACADSAK6bkHVLwNIAlonMAG8FcD1/jsBnAAAHDqwvoAAAADC+MsAAEAGkAR03YKq/+0JxAFwAAlg6xvwOoAAAAAAIHRgHYAAAABh/GUAACADSAK6bkHVLwNIAlonMAG8FcD1/nsQhINJAL4uoPX6AQAAACB0AACEaGF8hGhOOG8CJgGtE5gA3grgev+dAE4AAA4dWF9AAAAAYfw9aQYAMoAkoOsWVP1vTyAOgANIAFvfgNcBBAAAAAChA+sABAAACOMvAwAAGUAS0HULqn4ZQBLQOoEJ4K0ArvffCeAEAODQgfUFBAAAEMZfBgAAMoAkoOsWVP1vTyAOgANIAFvfgNcB5EkwDiYB4LqA1usHAAAAgNABAGChw/gI0ZwQb59E4wA4gASw9Q14HUAAAAAAEDqwDkAAAIAw/p40AwAZQBLQdQuqfhlAEtA6gQngrQCu998J4AQA4NCB9QUEAAAQxl8GAAAygCSg6xZU/W9PIA6AA0gAW9+A1wEEAAAAAKED6wAEAAAI4y8DAAAZQBLQdQuqfhlAEtA6gQngrQCu99+DIBxMAvB1Aa3XDwAAAAChAwAgRAvjI0RzwnkTMAloncAE8FYA1/vvBHACAHDowPoCAgAACOPvSTMAkAEkAV23oOp/ewJxABxAAtj6BrwOIAAAAAAIHVgHIAAAQBh/GQAAyACSgK5bUPXLAJKA1glMAG8FcL3/TgAnAACHDqwvIAAAgDD+MgAAkAEkAV23oOp/ewJxABxAAtj6BrwOIE+CcTAJANcFtF4/AAAAAIQOAAALHcZHiOaEePskGgfAASSArW/A6wACAAAAgNCBdQACAACE8fekGQDIAJKArltQ9csAkoDWCUwAbwVwvf9OACcAAIcOrC8gAACAMP4yAACQASQBXbeg6n97AnEAHEAC2PoGvA4gAAAAAAgdWAcgAABAGH8ZAADIAJKArltQ9csAkoDWCUwAbwVwvf8eBOFgEoCvC2i9fgAAAAAIHQAAIVoYHyGaE86bgElA6wQmgLcCuN5/J4ATAIBDB9YXEAAAQBh/T5oBgAwgCei6BVX/2xOIA+AAEsDWN+B1AAEAAABA6MA6AAEAAML4ywAAQAaQBHTdgqpfBpAEtE5gAngrgOv9dwI4AQA4dGB9AQEAAITxlwEAgAwgCei6BVX/2xOIA+AAEsDWN+B1AHkSjINJALguoPX6AQAAACB0AABY6DA+QjQnxNsn0TgADiABbH0DXgcQAAAAAIQOrAMQAAAgjL8nzQBABpAEdN2Cql8GkAS0TmACeCuA6/13AjgBADh0YH0BAQAAhPGXAQCADCAJ6LoFVf/bE4gD4AASwNY34HUAAQAAAEDowDoAAQAAwvjLAABABpAEdN2Cql8GkAS0TmACeCuA6/33IAgHkwB8XUDr9QMAAABA6AAACNHC+AjRnHDeBEwCWicwAbwVwPX+OwGcAAAcOrC+gAAAAML4e9IMAGQASUDXLaj6355AHAAHkAC2vgGvAwgAAAAAQgfWAQgAABDGXwYAADKAJKDrFlT9MoAkoHUCE8BbAVzvvxPACQDAoQPrCwgAACCMvwwAAGQASUDXLaj6355AHAAHkAC2vgGvA8iTYBxMAsB1Aa3XDwAAAAChAwDAQofxEaI5Id4+icYBcAAJYOsb8DqAAAAAACB0YB2AAAAAYfw9aQYAMoAkoOsWVP0ygCSgdQITwFsBXO+/E8AJAMChA+sLCAAAIIy/DAAAZABJQNctqPrfnkAcAAeQALa+Aa8DCAAAAABCB9YBCAAAEMZfBgAAMoAkoOsWVP0ygCSgdQITwFsBXO+/B0E4mATg6wJarx8AAAAAQgcAQIgWxkeI5oTzJmAS0DqBCeCtAK733wngBADg0IH1BQQAABDG35NmACADSAK6bkHV//YE4gA4gASw9Q14HUAAAAAAEDqwDkAAAIAw/jIAAJABJAFdt6DqlwEkAa0TmADeCuB6/50ATgAADh1YX0AAAABh/GUAACADSAK6bkHV//YE4gA4gASw9Q14HUCeBONgEgCuC2i9fgAAAAAIHQAAFjqMjxDNCfH2STQOgANIAFvfgNcBBAAAAAChA+sABAAACOPvSTMAkAEkAV23oOqXASQBrROYAN4K4Hr/nQBOAAAOHVhfQAAAAGH8ZQAAIANIArpuQdX/9gTiADiABLD1DXgdQAAAAAAQOrAOQAAAgDD+MgAAkAEkAV23oOqXASQBrROYAN4K4Hr/PQjCwSQAXxfQev0AAAAAEDoAAEK0MD5CNCecNwGTgNYJTABvBXC9/04AJwAAhw6sLyAAAIAw/p40AwAZQBLQdQuq/rcnEAfAASSArW/A6wACAAAAgNCBdQACAACE8ZcBAIAMIAnougVVvwwgCWidwATwVgDX++8EcAIAcOjA+gICAAAI4y8DAAAZQBLQdQuq/rcnEAfAASSArW/A6wDyJBgHkwBwXUDr9QMAAABA6AAAsNBhfIRoToi3T6JxABxAAtj6BrwOIAAAAAAIHVgHIAAAQBh/T5oBgAwgCei6BVW/DCAJaJ3ABPBWANf77wRwAgBw6MD6AgIAAAjjLwMAABlAEtB1C6r+tycQB8ABJICtb8DrAAIAAACA0IF1AAIAAITxlwEAgAwgCei6BVW/DCAJaJ3ABPBWANf7/x/aVlkHhH7qqQAAAABJRU5ErkJggg=='/%3e%3c/defs%3e%3c/svg%3e"
+                alt="Photo of Emma Wilson"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Emma Wilson</span>
+                <span class="testimonials__role">SaaS Founder</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+
+        <li class="testimonials__item swiper-slide">
+          <!-- comment -->
+          <p class="testimonials__comment">
+            Bizzier delivered a clear strategy tailored to our business goals.
+            They refined our messaging and improved conversion efficiency. The
+            collaboration felt structured, calm, and reliable.
+          </p>
+
+          <!-- person -->
+          <div class="testimonials__footer">
+            <div class="testimonials__person">
+              <img
+                class="testimonials__avatar"
+                src="data:image/svg+xml,%3csvg%20width='52'%20height='52'%20viewBox='0%200%2052%2052'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3ccircle%20cx='26'%20cy='26'%20r='26'%20fill='url(%23pattern0_112_8511)'/%3e%3cdefs%3e%3cpattern%20id='pattern0_112_8511'%20patternContentUnits='objectBoundingBox'%20width='1'%20height='1'%3e%3cuse%20xlink:href='%23image0_112_8511'%20transform='scale(0.00390625)'/%3e%3c/pattern%3e%3cimage%20id='image0_112_8511'%20width='256'%20height='256'%20preserveAspectRatio='none'%20xlink:href='data:image/png;base64,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'/%3e%3c/defs%3e%3c/svg%3e"
+                alt="Photo of Daniel Cooper"
+                width="52"
+                height="52"
+                loading="lazy" />
+
+              <div class="testimonials__meta">
+                <span class="testimonials__author">Daniel Cooper</span>
+                <span class="testimonials__role">CEO, Tech Startup</span>
+              </div>
+            </div>
+
+            <div class="testimonials__counter">
+              <span class="testimonials__counter-current"></span
+              ><span class="testimonials__counter-total"></span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Сontrols -->
+    <div class="testimonials__controls">
+      <!-- previous button -->
+      <button
+        class="testimonials__prev"
+        type="button"
+        aria-label="Previous testimonial">
+        <svg class="testimonials__arrow-icon" width="12" height="10">
+          <use href="/bizzier/assets/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+
+      <!-- next button -->
+      <button
+        class="testimonials__next testimonials__next--accent"
+        type="button"
+        aria-label="Next testimonial">
+        <svg class="testimonials__arrow-icon" width="12" height="10">
+          <use href="/bizzier/assets/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="cta container" id="cta">
+  <div class="cta__inner section">
+    <!-- Intro -->
+    <div class="cta__intro">
+      <h2 class="cta__title">
+        Time to Take Your B2B Growth to the Next Level?
+      </h2>
+      <p class="cta__description">
+        Let's design a strategy tailored to your goals, built to strengthen your
+        brand, attract the right clients, and drive measurable growth.
+      </p>
+    </div>
+
+    <!-- Content / testimonials list -->
+    <div class="cta__wrapper">
+      <img
+        class="cta__img"
+        src="/bizzier/assets/illustration2.svg"
+        alt="Business consultation illustration"
+        width="531"
+        height="367"
+        loading="lazy" />
+
+      <!-- form -->
+      <form class="cta__form">
+        <div class="cta__fields">
+          <div class="cta__field">
+            <label class="visually-hidden" for="name">Name</label>
+            <input
+              class="cta__input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required />
+          </div>
+
+          <div class="cta__field">
+            <label class="visually-hidden" for="company">Company</label>
+            <input
+              class="cta__input"
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Company"
+              required />
+          </div>
+
+          <div class="cta__field">
+            <label class="visually-hidden" for="email">Email</label>
+            <input
+              class="cta__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required />
+          </div>
+
+          <div class="cta__field">
+            <label class="visually-hidden" for="needs">Project Needs</label>
+            <textarea
+              class="cta__textarea"
+              id="needs"
+              name="needs"
+              rows="1"
+              placeholder="Project Needs"
+              required></textarea>
+          </div>
+        </div>
+
+        <button class="cta__btn btn btn--accent" type="submit">
+          Request a Quote
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+      <section class="faq" id="faq">
+  <div class="faq__inner container">
+    <!-- Intro -->
+    <div class="faq__intro">
+      <span class="faq__badge badge">FAQ</span>
+      <h2 class="faq__title">Want to Learn More About What We Offer?</h2>
+      <p class="faq__description">
+        We've compiled helpful answers to guide you through our marketing
+        approach, campaign process, and client results.
+      </p>
+    </div>
+
+    <!-- Content -->
+    <div class="faq__content">
+      <!-- list questions/answers -->
+      <ul class="faq__list">
+        <li class="faq__item">
+          <details class="faq__details" name="faq">
+            <summary class="faq__question">
+              What industries do you serve?
+
+              <svg
+                class="faq__icon faq__icon--plus"
+                aria-hidden="true"
+                width="18"
+                height="18">
+                <use href="/bizzier/assets/sprite.svg#icon-plus"></use>
+              </svg>
+
+              <svg
+                class="faq__icon faq__icon--minus"
+                aria-hidden="true"
+                width="18"
+                height="2">
+                <use href="/bizzier/assets/sprite.svg#icon-minus"></use>
+              </svg>
+            </summary>
+
+            <div class="faq__wrapper">
+              <p class="faq__answer">
+                We work with B2B companies in SaaS, technology, fintech,
+                professional services, and growth-focused startups.
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <li class="faq__item">
+          <details class="faq__details" name="faq">
+            <summary class="faq__question">
+              How soon can I see results?
+
+              <svg
+                class="faq__icon faq__icon--plus"
+                aria-hidden="true"
+                width="18"
+                height="18">
+                <use href="/bizzier/assets/sprite.svg#icon-plus"></use>
+              </svg>
+
+              <svg
+                class="faq__icon faq__icon--minus"
+                aria-hidden="true"
+                width="18"
+                height="2">
+                <use href="/bizzier/assets/sprite.svg#icon-minus"></use>
+              </svg>
+            </summary>
+            <div class="faq__wrapper">
+              <p class="faq__answer">
+                Within 3-6 months, most clients experience measurable
+                growth-gaining stronger brand visibility, higher engagement
+                rates, and improved revenue outcomes powered by our data-led
+                approach.
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <li class="faq__item">
+          <details class="faq__details" name="faq">
+            <summary class="faq__question">
+              Do you offer custom strategies?
+
+              <svg
+                class="faq__icon faq__icon--plus"
+                aria-hidden="true"
+                width="18"
+                height="18">
+                <use href="/bizzier/assets/sprite.svg#icon-plus"></use>
+              </svg>
+
+              <svg
+                class="faq__icon faq__icon--minus"
+                aria-hidden="true"
+                width="18"
+                height="2">
+                <use href="/bizzier/assets/sprite.svg#icon-minus"></use>
+              </svg>
+            </summary>
+            <div class="faq__wrapper">
+              <p class="faq__answer">
+                Yes. Every strategy is built around your specific goals,
+                audience, and growth stage-nothing generic.
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <li class="faq__item">
+          <details class="faq__details" name="faq">
+            <summary class="faq__question">
+              Can you handle international campaigns?
+
+              <svg
+                class="faq__icon faq__icon--plus"
+                aria-hidden="true"
+                width="18"
+                height="18">
+                <use href="/bizzier/assets/sprite.svg#icon-plus"></use>
+              </svg>
+
+              <svg
+                class="faq__icon faq__icon--minus"
+                aria-hidden="true"
+                width="18"
+                height="2">
+                <use href="/bizzier/assets/sprite.svg#icon-minus"></use>
+              </svg>
+            </summary>
+            <div class="faq__wrapper">
+              <p class="faq__answer">
+                Yes. We support international campaigns and adapt strategies to
+                different markets, regions, and audiences.
+              </p>
+            </div>
+          </details>
+        </li>
+
+        <li class="faq__item">
+          <details class="faq__details" name="faq">
+            <summary class="faq__question">
+              How do I get started?
+
+              <svg
+                class="faq__icon faq__icon--plus"
+                aria-hidden="true"
+                width="18"
+                height="18">
+                <use href="/bizzier/assets/sprite.svg#icon-plus"></use>
+              </svg>
+
+              <svg
+                class="faq__icon faq__icon--minus"
+                aria-hidden="true"
+                width="18"
+                height="2">
+                <use href="/bizzier/assets/sprite.svg#icon-minus"></use>
+              </svg>
+            </summary>
+            <div class="faq__wrapper">
+              <p class="faq__answer">
+                Start by requesting a quote. We'll review your needs and outline
+                the best next steps together.
+              </p>
+            </div>
+          </details>
+        </li>
+      </ul>
+
+      <!-- contact -->
+      <div class="faq__contact">
+        <img
+          class="faq__img"
+          src="/bizzier/assets/illustration3.svg"
+          alt="Illustration of a person looking for answers with question marks around"
+          width="227"
+          height="272"
+          loading="lazy" />
+
+        <h3 class="faq__subtitle">Would you like to know more?</h3>
+        <p class="faq__text">
+          Get in touch to explore how we can work together to achieve your
+          business objectives.
+        </p>
+        <a class="btn btn--accent" href="#cta">Contact Us Directly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="footer__inner container">
+    <!-- Content -->
+    <div class="footer__content">
+      <!-- Top -->
+      <div class="footer__top">
+        <h2 class="footer__title">
+          Stay ahead of the competition with expert B2B marketing insights.
+        </h2>
+
+        <!-- form -->
+        <form class="footer__form">
+          <div class="footer__field">
+            <label class="visually-hidden" for="email">Email</label>
+            <div class="footer__form-group">
+              <input
+                class="footer__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email here" />
+
+              <button class="footer__btn btn btn--accent" type="submit">
+                Subscribe
+              </button>
+            </div>
+          </div>
+
+          <!-- policy -->
+          <div class="footer__policy">
+            <input
+              class="footer__policy-checkbox visually-hidden"
+              type="checkbox"
+              name="policy"
+              value="true"
+              id="policy"
+              required />
+
+            <label class="footer__policy-label" for="policy">
+              <span class="footer__policy-checkmark">
+                <svg
+                  class="footer__policy-checkmark-icon"
+                  width="14"
+                  height="12"
+                  aria-hidden="true">
+                  <use href="/bizzier/assets/sprite.svg#icon-checkmark"></use>
+                </svg>
+              </span>
+
+              <span class="footer__policy-text">
+                I've read and agree to the
+                <a class="footer__policy-link" href="#">privacy policy</a>.
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+
+      <!-- Main -->
+      <div class="footer__main">
+        <!-- logotype -->
+        <div class="footer__info">
+          <a class="footer__logo" href="./">
+            <svg
+              class="footer__logo-icon"
+              width="64"
+              height="64"
+              aria-hidden="true">
+              <use href="/bizzier/assets/sprite.svg#icon-logo"></use>
+            </svg>
+            <span>Bizzier</span>
+          </a>
+
+          <p class="footer__description">
+            Smart, data-backed marketing that helps B2B brands stand out, scale
+            fast, and drive measurable results.
+          </p>
+        </div>
+
+        <!-- groups links -->
+        <div class="footer__groups">
+          <!-- -- navigation -->
+          <nav class="footer__nav" aria-label="Footer navigation">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="./">Home</a>
+              </li>
+
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#about">About</a>
+              </li>
+
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#services">Services</a>
+              </li>
+
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#pricing">Pricing</a>
+              </li>
+
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#faq">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- -- social links -->
+          <ul class="footer__social-list" aria-label="Social media links">
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                LinkedIn
+              </a>
+            </li>
+
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link"
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                Twitter
+              </a>
+            </li>
+
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                Facebook
+              </a>
+            </li>
+
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link"
+                href="https://www.tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                TikTok
+              </a>
+            </li>
+
+            <li class="footer__social-item">
+              <a
+                class="footer__social-link"
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer">
+                YouTube
+              </a>
+            </li>
+          </ul>
+
+          <!-- -- contacts -->
+          <address class="footer__contacts">
+            <ul class="footer__contacts-list" aria-label="Our contacts">
+              <li class="footer__contacts-item">
+                <a
+                  class="footer__contacts-link"
+                  href="mailto:contact@bizzier.com">
+                  <svg
+                    class="footer__contacts-icon"
+                    width="20"
+                    height="20"
+                    aria-hidden="true">
+                    <use href="/bizzier/assets/sprite.svg#icon-mail"></use>
+                  </svg>
+                  <span class="footer__contacts-text">contact@bizzier.com</span>
+                </a>
+              </li>
+
+              <li class="footer__contacts-item">
+                <a class="footer__contacts-link" href="tel:+1800234567">
+                  <svg
+                    class="footer__contacts-icon"
+                    width="20"
+                    height="20"
+                    aria-hidden="true">
+                    <use href="/bizzier/assets/sprite.svg#icon-phone"></use>
+                  </svg>
+                  <span class="footer__contacts-text">+1 (800) 234-567</span>
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer__copyright">
+      <p class="footer__copyright-text">
+        &copy; 2026 Bizzier. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="backdrop js-menu-container" role="dialog" aria-modal="true">
+  <div class="menu container">
+    <button
+      class="menu__close-btn js-close-menu"
+      type="button"
+      aria-label="Close menu"
+      title="Close menu"
+      aria-expanded="false">
+      <svg class="menu__close-icon" aria-hidden="true" width="18" height="14">
+        <use href="/bizzier/assets/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <div class="menu__content">
+      <!-- navigation -->
+      <nav class="menu__nav" aria-label="Main navigation">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link is-active" href="./">Home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#about" class="menu__link">About</a>
+          </li>
+          <li class="menu__item">
+            <a href="#services" class="menu__link">Services</a>
+          </li>
+          <li class="menu__item">
+            <a href="#pricing" class="menu__link">Pricing</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- cta-link -->
+      <a class="menu__btn btn btn--accent" href="#cta">Try For Free</a>
+    </div>
+  </div>
+</div>
+
+    <!-- Scroll to top button -->
+<button class="scroll-to-top" type="button" aria-label="Scroll to top">
+  <svg class="scroll-to-top__icon" width="18" height="18" aria-hidden="true">
+    <use href="/bizzier/assets/sprite.svg#icon-arrow"></use>
+  </svg>
+</button>
+
+
+  </body>
+</html>
