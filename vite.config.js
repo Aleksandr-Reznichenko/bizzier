@@ -3,6 +3,7 @@ import injectHTML from 'vite-plugin-html-inject';
 import { sync } from 'glob';
 
 export default defineConfig({
+  base: '/bizzier/',
   build: {
     emptyOutDir: false,
     minify: false,
