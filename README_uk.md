@@ -22,7 +22,7 @@ Developer** з фокусом на:
 
 ![Прев'ю Bizzier](./src/images/preview.jpg)
 
-### Посилання
+### 🔗 Посилання
 
 - **Жива сторінка:** https://aleksandr-reznichenko.github.io/bizzier
 - **Репозиторій:** https://github.com/Aleksandr-Reznichenko/bizzier
