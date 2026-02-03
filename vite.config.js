@@ -5,7 +5,7 @@ import { sync } from 'glob';
 export default defineConfig({
   base: '/bizzier/',
   build: {
-    emptyOutDir: false,
+    emptyOutDir: true,
     minify: false,
     rollupOptions: {
       input: sync('./*.html'),
