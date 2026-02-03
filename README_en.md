@@ -22,7 +22,7 @@ CSS Developer** position with a focus on:
 
 ![Bizzier Preview](./src/images/preview.jpg)
 
-### Links
+### 🔗 Links
 
 - **Live version:** https://aleksandr-reznichenko.github.io/bizzier
 - **Repository:** https://github.com/Aleksandr-Reznichenko/bizzier
