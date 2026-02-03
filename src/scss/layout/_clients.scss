@@ -35,4 +35,8 @@
       width: fluid(list.nth($value, 1), list.nth($value, 2));
     }
   }
+
+  &__link {
+    display: block;
+  }
 }
