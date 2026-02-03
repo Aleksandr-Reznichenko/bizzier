@@ -40,13 +40,10 @@
     }
   }
 
-  &__wrapper {
+  &__nav,
+  &__btn {
     @include m.mq(tablet, max) {
       display: none;
-    }
-
-    @include m.mq(tablet) {
-      display: contents;
     }
   }
 
