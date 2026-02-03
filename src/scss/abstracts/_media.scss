@@ -38,6 +38,7 @@
   @if $active-on-touch {
     @media (any-hover: none) {
       &:active {
+        transition: none;
         @content;
       }
     }
