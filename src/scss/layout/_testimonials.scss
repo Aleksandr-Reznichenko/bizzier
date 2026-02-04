@@ -162,6 +162,10 @@
       border-color var.$duration var.$timing-fn,
       background-color var.$duration var.$timing-fn;
 
+    &:disabled {
+      cursor: not-allowed;
+    }
+
     @include m.hover {
       border-color: transparent;
       background-color: fn.color(accent-secondary);
