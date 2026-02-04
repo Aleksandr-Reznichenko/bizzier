@@ -34,10 +34,11 @@
   min-width: 0;
 }
 
-/* === Reset spacing === */
+/* === Reset and Touch defaults === */
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* === Root defaults === */
@@ -265,6 +266,7 @@ body {
 }
 @media (any-hover: none) {
   .btn:active {
+    transition: none;
     color: #ffffff;
     border-color: transparent;
     background-color: #4f54c8;
@@ -291,6 +293,7 @@ body {
 }
 @media screen and (max-width: 63.98rem) and (any-hover: none) {
   .btn--text:active {
+    transition: none;
     color: #4f54c8;
     background-color: transparent;
   }
@@ -339,18 +342,16 @@ body {
   border-radius: 1rem;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media (any-hover: hover) {
+@media screen and (min-width: 64rem) and (any-hover: hover) {
   .card:not(:disabled):hover, .card:not(:disabled):focus-visible {
     background-color: #edefff;
   }
 }
-@media (any-hover: none) {
+@media screen and (min-width: 64rem) and (any-hover: none) {
   .card:active {
+    transition: none;
     background-color: #edefff;
   }
-}
-.card:focus-within {
-  background-color: #edefff;
 }
 
 .scroll-to-top {
@@ -378,6 +379,7 @@ body {
 }
 @media (any-hover: none) {
   .scroll-to-top:active {
+    transition: none;
     background-color: #4f54c8;
   }
 }
@@ -446,6 +448,7 @@ body {
 }
 @media (any-hover: none) {
   .header__nav-link:not(.is-active):active {
+    transition: none;
     color: #f44817;
   }
 }
@@ -468,6 +471,7 @@ body {
 }
 @media (any-hover: none) {
   .header__menu-icon:active {
+    transition: none;
     fill: #f44817;
   }
 }
@@ -749,6 +753,9 @@ body {
 .clients__logo-06 {
   width: clamp(5.75rem, calc(4.241rem + 6.19vw), 9.813rem);
 }
+.clients__link {
+  display: block;
+}
 
 .value {
   padding-block: clamp(5rem, calc(3.886rem + 4.571vw), 8rem) clamp(5rem, calc(3.143rem + 7.619vw), 10rem);
@@ -968,6 +975,7 @@ body {
 }
 @media (any-hover: none) {
   .pagination__prev:active, .pagination__next:active {
+    transition: none;
     background-color: #edefff;
   }
 }
@@ -1012,6 +1020,7 @@ body {
 }
 @media (any-hover: none) {
   .pagination__page:active {
+    transition: none;
     color: #656565;
     background-color: #edefff;
   }
@@ -1141,21 +1150,23 @@ body {
     align-items: end;
   }
 }
-.pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent {
-  background-color: #fff4f2;
-}
-.pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent .pricing__wrapper-icon,
-.pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent .pricing__btn {
-  background-color: #f44817;
-}
-.pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent .pricing__benefit-icon {
-  fill: #f44817;
+@media screen and (min-width: 64rem) {
+  .pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent {
+    background-color: #fff4f2;
+  }
+  .pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent .pricing__wrapper-icon,
+  .pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent .pricing__btn {
+    background-color: #f44817;
+  }
+  .pricing__list:has(.pricing__card:not(.pricing__card--accent):hover) .pricing__card--accent .pricing__benefit-icon {
+    fill: #f44817;
+  }
 }
 .pricing__card {
   background-color: #fff4f2;
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media (any-hover: hover) {
+@media screen and (min-width: 64rem) and (any-hover: hover) {
   .pricing__card:not(:disabled):hover .pricing__wrapper-icon,
   .pricing__card:not(:disabled):hover .pricing__btn, .pricing__card:not(:disabled):focus-visible .pricing__wrapper-icon,
   .pricing__card:not(:disabled):focus-visible .pricing__btn {
@@ -1165,7 +1176,10 @@ body {
     fill: #4f54c8;
   }
 }
-@media (any-hover: none) {
+@media screen and (min-width: 64rem) and (any-hover: none) {
+  .pricing__card:active {
+    transition: none;
+  }
   .pricing__card:active .pricing__wrapper-icon,
   .pricing__card:active .pricing__btn {
     background-color: #4f54c8;
@@ -1381,6 +1395,9 @@ body {
   border: 1px solid #222222;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.testimonials__prev:disabled, .testimonials__next:disabled {
+  cursor: not-allowed;
+}
 @media (any-hover: hover) {
   .testimonials__prev:not(:disabled):hover, .testimonials__prev:not(:disabled):focus-visible, .testimonials__next:not(:disabled):hover, .testimonials__next:not(:disabled):focus-visible {
     border-color: transparent;
@@ -1392,6 +1409,7 @@ body {
 }
 @media (any-hover: none) {
   .testimonials__prev:active, .testimonials__next:active {
+    transition: none;
     border-color: transparent;
     background-color: #4f54c8;
   }
@@ -1814,6 +1832,7 @@ body {
 }
 @media (any-hover: none) {
   .footer__nav-link:active, .footer__social-link:active, .footer__contacts-text:active {
+    transition: none;
     border-color: currentColor;
   }
 }
@@ -1859,7 +1878,7 @@ body {
     overflow-y: auto;
     display: grid;
     justify-content: end;
-    background-color: #ffffff;
+    background-color: #fff4f2;
     transform: translateX(100%);
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -1874,16 +1893,30 @@ body {
   .menu__close-icon {
     fill: #222222;
   }
+}
+@media screen and (max-width: 47.98rem) and (any-hover: hover) {
+  .menu__close-icon:not(:disabled):hover, .menu__close-icon:not(:disabled):focus-visible {
+    fill: #f44817;
+  }
+}
+@media screen and (max-width: 47.98rem) and (any-hover: none) {
+  .menu__close-icon:active {
+    transition: none;
+    fill: #f44817;
+  }
+}
+@media screen and (max-width: 47.98rem) {
   .menu__content {
-    padding-block: 5rem 1.5rem;
+    padding-block: 6.25rem 1.5rem;
   }
   .menu__list {
     display: grid;
-    row-gap: 0.75rem;
+    row-gap: 1rem;
     justify-items: end;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
   }
   .menu__link {
+    font-size: 1rem;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
@@ -1894,6 +1927,7 @@ body {
 }
 @media screen and (max-width: 47.98rem) and (any-hover: none) {
   .menu__link:not(.is-active):active {
+    transition: none;
     color: #f44817;
   }
 }
