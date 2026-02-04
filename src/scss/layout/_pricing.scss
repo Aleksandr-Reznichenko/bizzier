@@ -21,17 +21,19 @@
       align-items: end;
     }
 
-    &:has(.pricing__card:not(.pricing__card--accent):hover)
-      .pricing__card--accent {
-      background-color: fn.color(bg-soft);
+    @include m.mq(laptop) {
+      &:has(.pricing__card:not(.pricing__card--accent):hover)
+        .pricing__card--accent {
+        background-color: fn.color(bg-soft);
 
-      .pricing__wrapper-icon,
-      .pricing__btn {
-        background-color: fn.color(accent-primary);
-      }
+        .pricing__wrapper-icon,
+        .pricing__btn {
+          background-color: fn.color(accent-primary);
+        }
 
-      .pricing__benefit-icon {
-        fill: fn.color(accent-primary);
+        .pricing__benefit-icon {
+          fill: fn.color(accent-primary);
+        }
       }
     }
   }
@@ -40,13 +42,15 @@
     background-color: fn.color(bg-soft);
     transition: background-color $duration var.$timing-fn;
 
-    @include m.hover {
-      .pricing__wrapper-icon,
-      .pricing__btn {
-        background-color: fn.color(accent-secondary);
-      }
-      .pricing__benefit-icon {
-        fill: fn.color(accent-secondary);
+    @include m.mq(laptop) {
+      @include m.hover {
+        .pricing__wrapper-icon,
+        .pricing__btn {
+          background-color: fn.color(accent-secondary);
+        }
+        .pricing__benefit-icon {
+          fill: fn.color(accent-secondary);
+        }
       }
     }
   }
