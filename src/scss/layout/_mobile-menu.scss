@@ -52,7 +52,7 @@
     display: grid;
     justify-content: end;
 
-    background-color: fn.color(bg-primary);
+    background-color: fn.color(bg-soft);
 
     transform: translateX(100%);
     transition: transform $duration var.$timing-fn;
@@ -69,21 +69,26 @@
 
     &__close-icon {
       fill: fn.color(text-primary);
+
+      @include m.hover {
+        fill: fn.color(accent-primary);
+      }
     }
 
     &__content {
-      padding-block: fn.rem(80) fn.rem(24);
+      padding-block: fn.rem(100) fn.rem(24);
     }
 
     &__list {
       display: grid;
-      row-gap: fn.rem(12);
+      row-gap: fn.rem(16);
       justify-items: end;
 
-      margin-bottom: fn.rem(24);
+      margin-bottom: fn.rem(48);
     }
 
     &__link {
+      font-size: fn.rem(16);
       transition: color var.$duration var.$timing-fn;
 
       &:not(.is-active) {
