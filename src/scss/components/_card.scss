@@ -10,11 +10,9 @@
 
   transition: background-color var.$duration var.$timing-fn;
 
-  @include m.hover {
-    background-color: fn.color(bg-muted);
-  }
-
-  &:focus-within {
-    background-color: fn.color(bg-muted);
+  @include m.mq(laptop) {
+    @include m.hover {
+      background-color: fn.color(bg-muted);
+    }
   }
 }
