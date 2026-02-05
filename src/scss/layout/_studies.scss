@@ -30,9 +30,7 @@
     padding: fn.rem(32);
     background-color: fn.color(bg-primary);
 
-    transition:
-      background-color var.$duration var.$timing-fn,
-      opacity $duration $timing-fn;
+    transition: opacity $duration $timing-fn;
 
     @include m.mq(tablet) {
       grid-template-columns: auto 1fr;
@@ -46,6 +44,10 @@
 
     &.is-active {
       background-color: fn.color(bg-muted);
+
+      .studies__caret {
+        display: none;
+      }
     }
   }
 
@@ -62,6 +64,7 @@
   // details
 
   &__details {
+    position: relative;
     margin-bottom: fluid(24, 93);
   }
 
@@ -78,6 +81,39 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+
+      margin-bottom: fn.rem(8);
+    }
+  }
+
+  &__card:not(.is-active) &__text::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    bottom: fn.rem(16);
+    height: 1.2em;
+
+    background: linear-gradient(to bottom, transparent, fn.color(bg-primary));
+
+    pointer-events: none;
+  }
+
+  @keyframes caret-bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(fn.rem(5));
+    }
+  }
+
+  &__caret {
+    @include m.mq(laptop, max) {
+      animation: caret-bounce 1500ms ease-in-out infinite;
+      margin-inline: auto;
+
+      fill: fn.color(accent-primary);
     }
   }
 
@@ -169,7 +205,6 @@
   }
 
   // list of pages
-
   &__list {
     @include mx.flex-center;
 
