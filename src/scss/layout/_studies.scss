@@ -84,18 +84,24 @@
 
       margin-bottom: fn.rem(8);
     }
+
+    @include m.mq-between(tablet, laptop) {
+      -webkit-line-clamp: 3;
+    }
   }
 
   &__card:not(.is-active) &__text::after {
-    content: '';
-    position: absolute;
-    inset-inline: 0;
-    bottom: fn.rem(16);
-    height: 1.2em;
+    @include m.mq(laptop, max) {
+      content: '';
+      position: absolute;
+      inset-inline: 0;
+      bottom: fn.rem(18);
+      height: 1.5em;
 
-    background: linear-gradient(to bottom, transparent, fn.color(bg-primary));
+      background: linear-gradient(to bottom, transparent, fn.color(bg-primary));
 
-    pointer-events: none;
+      pointer-events: none;
+    }
   }
 
   @keyframes caret-bounce {
@@ -114,6 +120,10 @@
       margin-inline: auto;
 
       fill: fn.color(accent-primary);
+    }
+
+    @include m.mq(laptop) {
+      display: none;
     }
   }
 
