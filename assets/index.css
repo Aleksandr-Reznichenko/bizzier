@@ -916,14 +916,21 @@ body {
     margin-bottom: 0.5rem;
   }
 }
-.studies__card:not(.is-active) .studies__text::after {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  bottom: 1rem;
-  height: 1.2em;
-  background: linear-gradient(to bottom, transparent, #ffffff);
-  pointer-events: none;
+@media screen and (min-width: 48rem) and (max-width: 63.98rem) {
+  .studies__text {
+    -webkit-line-clamp: 3;
+  }
+}
+@media screen and (max-width: 63.98rem) {
+  .studies__card:not(.is-active) .studies__text::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 1.13rem;
+    height: 1.5em;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+    pointer-events: none;
+  }
 }
 @keyframes caret-bounce {
   0%, 100% {
@@ -938,6 +945,11 @@ body {
     animation: caret-bounce 1500ms ease-in-out infinite;
     margin-inline: auto;
     fill: #f44817;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .studies__caret {
+    display: none;
   }
 }
 .studies__stats {
