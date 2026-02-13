@@ -1,4 +1,4 @@
-# Bizzier — Marketing Agency Landing Page
+# Bizzier - Marketing Agency Landing Page
 
 **English** | **[🇺🇦 Українською](README_uk.md)**
 
@@ -63,9 +63,9 @@ CSS Developer** position with a focus on:
 
 ## 📁 Project Structure
 
-- `index.html` — main page
-- `src/` — fonts, images, js, partials, scss
 - `public/` — static assets
+- `src/` — fonts, images, js, partials, scss
+- `index.html` — main page
 - `vite.config.js` — build configuration
 
 ## 🚀 Run Locally
