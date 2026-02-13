@@ -1,4 +1,4 @@
-# Bizzier — Marketing Agency Landing Page
+# Bizzier - Marketing Agency Landing Page
 
 **🇺🇦 Українською** | **[English](README_en.md)**
 
@@ -63,9 +63,9 @@ Developer** з фокусом на:
 
 ## 📁 Структура проєкту
 
-- `index.html` — основна сторінка
-- `src/` — fonts, images, js, partials, scss
 - `public/` — статичні ресурси
+- `src/` — fonts, images, js, partials, scss
+- `index.html` — основна сторінка
 - `vite.config.js` — конфігурація збірки
 
 ## 🚀 Запуск локально
